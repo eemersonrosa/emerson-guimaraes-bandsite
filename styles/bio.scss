@@ -82,6 +82,14 @@
 		.header-container-text-h1 {
 			font-size: 3.75rem;
 			font-family: $font-medium;
+
+			@media screen and (max-width: 1279px) {
+			}
+
+			@media screen and (max-width: 767px) {
+				font-size: 1.8rem;
+				margin-left: 1rem;
+			}
 		}
 	}
 }
