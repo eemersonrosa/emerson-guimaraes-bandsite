@@ -39,3 +39,103 @@ body {
 	font-family: $font-regular, sans-serif;
 	margin: 0;
 }
+
+.header-nav {
+	background-color: $primary-color-black;
+	display: flex;
+	align-items: center;
+
+	@media screen and (max-width: 1279px) {
+		flex-direction: row;
+		align-items: center;
+		padding: 1rem 2rem;
+	}
+
+	@media screen and (max-width: 767px) {
+		flex-direction: column;
+		align-items: center;
+		padding: 0rem;
+	}
+}
+
+.header-logo-image {
+	display: inline-flex;
+	width: auto;
+	max-width: 7.5rem;
+	height: auto;
+	max-height: 1.25rem;
+	object-fit: contain;
+	margin-right: 2rem;
+	padding-left: 7rem;
+
+	@media screen and (max-width: 1279px) {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		padding: 1rem;
+		margin-right: 0;
+		gap: 1rem;
+		max-width: 8rem;
+	}
+
+	@media screen and (max-width: 767px) {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		padding: 1rem;
+		margin-right: 0;
+		gap: 1rem;
+	}
+}
+
+.header-nav-links {
+	list-style-type: none;
+	display: inline-flex;
+	gap: 2rem;
+	position: relative;
+
+	@media screen and (max-width: 1279px) {
+		flex-direction: row;
+		align-items: center;
+		gap: 1rem;
+	}
+
+	@media screen and (max-width: 767px) {
+		flex-direction: row;
+		align-items: center;
+		gap: 1rem;
+	}
+
+	a {
+		display: block;
+		color: $secondary-color-mercury;
+		text-align: center;
+		text-decoration: none;
+		padding: 1.25rem;
+		position: relative;
+
+		&::after {
+			content: "";
+			position: absolute;
+			bottom: 0;
+			left: 50%;
+			transform: translateX(-50%);
+			width: 1rem;
+			height: 0.25rem;
+			background-color: $primary-color-white;
+			visibility: hidden;
+		}
+
+		&:hover::after,
+		&.active::after {
+			visibility: visible;
+			width: 80%;
+		}
+
+		&:hover,
+		&.active {
+			color: $primary-color-white;
+			font-family: $font-bold;
+		}
+	}
+}
