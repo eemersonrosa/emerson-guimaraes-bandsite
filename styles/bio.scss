@@ -1,1 +1,47 @@
 @use "./patials/global" as *;
+
+.header-container-background {
+	position: relative;
+	width: 100%;
+	height: 75vh;
+	overflow: hidden;
+
+	.header-container-image-container {
+		position: relative;
+		width: 100%;
+		height: auto;
+		overflow: hidden;
+
+		.header-container-image {
+			width: 100%;
+			height: 100%;
+			object-fit: contain;
+			object-position: center;
+		}
+
+		&::before {
+			content: "";
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			background-color: $primary-color-black;
+			opacity: 0.5;
+			z-index: 1;
+		}
+	}
+
+	.header-container-text {
+		position: absolute;
+		top: 50%;
+		left: 30rem;
+		transform: translate(-50%, -50%);
+		z-index: 2;
+		color: $primary-color-white;
+		text-align: left;
+
+		.header-container-text-h1 {
+			font-size: 3.75rem;
+			font-family: $font-medium;
+		}
+	}
+}
