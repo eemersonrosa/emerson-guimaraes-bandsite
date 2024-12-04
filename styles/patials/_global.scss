@@ -1,0 +1,41 @@
+/* Variables Start */
+/* Font Variables */
+$font-regular: "NunitoSans-Regular";
+$font-medium: "NunitoSans-Medium";
+$font-bold: "NunitoSans-Bold";
+
+/* Colors Variables */
+$primary-color-black: #323232; /* BansSite-Black */
+$primary-color-silver: #afafaf; /* BansSite-Silver */
+$primary-color-white: #ffffff; /* BansSite-White */
+
+$secondary-color-dark-black: #f8f9fa; /* BansSite-DarkBlack */
+$secondary-color-mercury: #e1e1e1; /* BansSite-Mercury */
+$secondary-color-alabaster: #fafafa; /* BansSite-Alabaster */
+
+/* Font Variables */
+
+@font-face {
+	font-family: "NunitoSans-Regular";
+	font-style: normal;
+	font-weight: 400;
+	src: url("../../assets/fonts/NunitoSans-Regular.woff");
+}
+
+@font-face {
+	font-family: "NunitoSans-Medium";
+	font-style: normal;
+	src: url("../../assets/fonts/NunitoSans-Medium.woff");
+}
+
+@font-face {
+	font-family: "NunitoSans-Bold";
+	font-style: normal;
+	src: url("../../assets/fonts/NunitoSans-Bold.woff");
+}
+
+/* Styles Start */
+body {
+	font-family: $font-regular, sans-serif;
+	margin: 0;
+}

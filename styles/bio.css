@@ -1,0 +1,31 @@
+/* Variables Start */
+/* Font Variables */
+/* Colors Variables */
+/* BansSite-Black */
+/* BansSite-Silver */
+/* BansSite-White */
+/* BansSite-DarkBlack */
+/* BansSite-Mercury */
+/* BansSite-Alabaster */
+/* Font Variables */
+@font-face {
+  font-family: "NunitoSans-Regular";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../../assets/fonts/NunitoSans-Regular.woff");
+}
+@font-face {
+  font-family: "NunitoSans-Medium";
+  font-style: normal;
+  src: url("../../assets/fonts/NunitoSans-Medium.woff");
+}
+@font-face {
+  font-family: "NunitoSans-Bold";
+  font-style: normal;
+  src: url("../../assets/fonts/NunitoSans-Bold.woff");
+}
+/* Styles Start */
+body {
+  font-family: "NunitoSans-Regular", sans-serif;
+  margin: 0;
+}/*# sourceMappingURL=bio.css.map */
