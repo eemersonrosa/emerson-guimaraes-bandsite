@@ -49,12 +49,37 @@ body {
 		flex-direction: row;
 		align-items: center;
 		padding: 1rem 2rem;
+		padding-bottom: 0;
+		margin-bottom: 0;
 	}
 
 	@media screen and (max-width: 767px) {
 		flex-direction: column;
 		align-items: center;
 		padding: 0rem;
+	}
+}
+
+.header-logo {
+	display: flex;
+	align-items: center;
+	padding-left: 2rem;
+	padding-right: 2rem;
+
+	@media screen and (max-width: 1279px) {
+		flex-direction: column;
+		align-items: center;
+		padding: 1rem;
+		margin-right: 0;
+		gap: 1rem;
+		max-width: 8rem;
+	}
+
+	@media screen and (max-width: 767px) {
+		flex-direction: column;
+		align-items: center;
+		gap: 1rem;
+		padding: 0;
 	}
 }
 
@@ -97,22 +122,35 @@ body {
 	@media screen and (max-width: 1279px) {
 		flex-direction: row;
 		align-items: center;
+		margin-left: 2rem;
 		gap: 1rem;
 	}
 
 	@media screen and (max-width: 767px) {
+		display: inline-flex;
 		flex-direction: row;
 		align-items: center;
-		gap: 1rem;
+		gap: 4rem;
+		font-size: 1.25rem;
+		margin: 0;
 	}
 
 	a {
 		display: block;
-		color: $secondary-color-mercury;
+		color: $primary-color-silver;
 		text-align: center;
 		text-decoration: none;
 		padding: 1.25rem;
 		position: relative;
+
+		@media screen and (max-width: 1279px) {
+			font-size: 1.125rem;
+		}
+
+		@media screen and (max-width: 767px) {
+			font-size: 1rem;
+			display: block;
+		}
 
 		&::after {
 			content: "";
@@ -129,7 +167,13 @@ body {
 		&:hover::after,
 		&.active::after {
 			visibility: visible;
-			width: 80%;
+			width: 70%;
+
+			@media screen and (max-width: 1279px) {
+			}
+
+			@media screen and (max-width: 767px) {
+			}
 		}
 
 		&:hover,
