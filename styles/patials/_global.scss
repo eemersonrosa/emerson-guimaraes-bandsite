@@ -102,8 +102,10 @@ body {
 		flex-direction: column;
 		align-items: center;
 		padding: 1rem;
+		padding-top: 1.5rem;
 		margin-right: 0;
 		gap: 1rem;
+		width: 145%;
 	}
 }
 
@@ -143,8 +145,9 @@ body {
 		}
 
 		@media screen and (max-width: 767px) {
-			font-size: 1rem;
+			font-size: 1.15rem;
 			display: block;
+			padding: 1rem;
 		}
 
 		&::after {
@@ -163,12 +166,16 @@ body {
 		&.active::after {
 			visibility: visible;
 			width: 70%;
+			bottom: 0;
+			left: 50%;
+			transform: translateX(-50%);
 
 			@media screen and (max-width: 1279px) {
 				margin-bottom: 0;
 			}
 
 			@media screen and (max-width: 767px) {
+				width: 100%;
 			}
 		}
 
