@@ -6,10 +6,6 @@
 	height: 65vh;
 	overflow: hidden;
 
-	@media screen and (max-width: 1279px) {
-		height: auto;
-	}
-
 	.header-container-image-container {
 		position: relative;
 		width: 100%;
@@ -34,12 +30,6 @@
 			top: 50%;
 			left: 50%;
 			transform: translate(-50%, -50%);
-
-			@media screen and (max-width: 1279px) {
-				position: relative;
-				transform: none;
-				left: 0;
-			}
 		}
 	}
 
@@ -52,19 +42,9 @@
 		color: $primary-color-white;
 		text-align: left;
 
-		@media screen and (max-width: 1279px) {
-			left: 35%;
-		}
-
 		.header-container-text-h1 {
 			font-size: 3.75rem;
 			font-family: $font-medium;
-			margin-left: -8rem;
-
-			@media screen and (max-width: 767px) {
-				font-size: 1.8rem;
-				margin-left: 1rem;
-			}
 		}
 	}
 }
@@ -77,14 +57,18 @@ main {
 
 	#musicians {
 		margin-bottom: 4rem;
+		text-align: left;
 
 		.main-musicians-container {
-			width: auto;
+			max-width: 70rem;
+			width: 100%;
 			margin: auto;
+			padding-left: 2rem;
 
 			h2 {
 				font-size: 2.5rem;
 				margin-bottom: 2rem;
+				margin-left: -5rem;
 			}
 
 			.main-band-show-container {
@@ -94,25 +78,30 @@ main {
 				margin-bottom: 2rem;
 
 				.main-band-show-image {
-					width: 90%;
-					height: 50vh;
+					width: 100%;
+					height: 55vh;
 					object-fit: fill;
 				}
 			}
 
 			.main-band-show-quote {
-				padding: 0 2rem;
+				position: relative;
+				display: block;
+				right: auto;
 				margin-top: 0;
-				margin-bottom: 3rem;
-				border-radius: 0.5rem;
-				jus .main-band-show-quote-text {
-					font-size: 1.125rem;
+				margin-bottom: 4rem;
+
+				.main-band-show-quote-text {
 					margin-bottom: 1rem;
-					margin-right: 15rem;
+					font-family: $font-medium;
+					font-size: 1.5rem;
+					text-align: left;
+					margin-right: 20rem;
 				}
 
 				.main-band-show-quote-author {
-					font-size: 1.1rem;
+					font-size: 1rem;
+					text-align: left;
 				}
 			}
 		}
@@ -121,6 +110,7 @@ main {
 			display: grid;
 			grid-template-columns: 1fr 1fr;
 			gap: 2rem;
+			padding-left: 2rem;
 		}
 
 		article {
@@ -135,6 +125,8 @@ main {
 			p {
 				font-size: 1.125rem;
 				margin-bottom: 1.5rem;
+				line-height: 1.75;
+				text-align: left;
 			}
 		}
 	}
