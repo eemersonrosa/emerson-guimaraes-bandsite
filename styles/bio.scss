@@ -58,12 +58,11 @@ main {
 	#musicians {
 		margin-bottom: 4rem;
 		text-align: left;
+		max-width: 70rem;
 
 		.main-musicians-container {
-			max-width: 70rem;
-			width: 100%;
-			margin: auto;
-			padding-left: 2rem;
+			margin: 0;
+			padding: 0;
 
 			h2 {
 				font-size: 2.5rem;
@@ -81,6 +80,7 @@ main {
 					width: 100%;
 					height: 55vh;
 					object-fit: fill;
+					margin: 0 auto;
 				}
 			}
 
@@ -106,49 +106,51 @@ main {
 			}
 		}
 
-		.main-band-show-container-text {
-			display: grid;
-			grid-template-columns: 1fr 1fr;
-			gap: 2rem;
-			padding-left: 2rem;
-		}
+		.main-band-container-bio {
+			margin: 0;
 
-		article {
-			max-width: 60rem;
-			margin: 0 auto 1rem;
+			.main-band-container-bio-text {
+				display: grid;
+				grid-template-columns: 1fr 1fr;
+				gap: 2rem;
+			}
 
 			h3 {
-				font-size: 2rem;
-				margin-bottom: 1.5rem;
+				margin-bottom: 1rem;
+				font-family: $font-regular;
+				font-size: 1.5em;
+				text-align: left;
+				font-weight: 100;
 			}
 
 			p {
-				font-size: 1.125rem;
+				font-size: 1rem;
 				margin-bottom: 1.5rem;
-				line-height: 1.75;
+				line-height: 1.7;
 				text-align: left;
+				font-family: $font-regular;
 			}
 		}
-	}
 
-	#photolibrary {
-		max-width: 1200px;
-		width: 100%;
-		text-align: center;
-
-		h2 {
-			font-size: 2.5rem;
-			margin-bottom: 2rem;
-		}
-
-		display: grid;
-		grid-template-columns: repeat(3, 1fr);
-		gap: 1rem;
-
-		.main-photo-gallery-image {
+		#photolibrary {
+			max-width: 1200px;
 			width: 100%;
-			height: auto;
-			border-radius: 0.5rem;
+			text-align: center;
+
+			h2 {
+				font-size: 2.5rem;
+				margin-bottom: 2rem;
+			}
+
+			display: grid;
+			grid-template-columns: repeat(3, 1fr);
+			gap: 1rem;
+
+			.main-photo-gallery-image {
+				width: 100%;
+				height: auto;
+				border-radius: 0.5rem;
+			}
 		}
 	}
 }

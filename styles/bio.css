@@ -214,12 +214,11 @@ main {
 main #musicians {
   margin-bottom: 4rem;
   text-align: left;
+  max-width: 70rem;
 }
 main #musicians .main-musicians-container {
-  max-width: 70rem;
-  width: 100%;
-  margin: auto;
-  padding-left: 2rem;
+  margin: 0;
+  padding: 0;
 }
 main #musicians .main-musicians-container h2 {
   font-size: 2.5rem;
@@ -237,6 +236,7 @@ main #musicians .main-musicians-container .main-band-show-container .main-band-s
   height: 55vh;
   -o-object-fit: fill;
      object-fit: fill;
+  margin: 0 auto;
 }
 main #musicians .main-musicians-container .main-band-show-quote {
   position: relative;
@@ -256,27 +256,29 @@ main #musicians .main-musicians-container .main-band-show-quote .main-band-show-
   font-size: 1rem;
   text-align: left;
 }
-main #musicians .main-band-show-container-text {
+main #musicians .main-band-container-bio {
+  margin: 0;
+}
+main #musicians .main-band-container-bio .main-band-container-bio-text {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 2rem;
-  padding-left: 2rem;
 }
-main #musicians article {
-  max-width: 60rem;
-  margin: 0 auto 1rem;
-}
-main #musicians article h3 {
-  font-size: 2rem;
-  margin-bottom: 1.5rem;
-}
-main #musicians article p {
-  font-size: 1.125rem;
-  margin-bottom: 1.5rem;
-  line-height: 1.75;
+main #musicians .main-band-container-bio h3 {
+  margin-bottom: 1rem;
+  font-family: "NunitoSans-Regular", sans-serif;
+  font-size: 1.5em;
   text-align: left;
+  font-weight: 100;
 }
-main #photolibrary {
+main #musicians .main-band-container-bio p {
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+  line-height: 1.7;
+  text-align: left;
+  font-family: "NunitoSans-Regular", sans-serif;
+}
+main #musicians #photolibrary {
   max-width: 1200px;
   width: 100%;
   text-align: center;
@@ -284,11 +286,11 @@ main #photolibrary {
   grid-template-columns: repeat(3, 1fr);
   gap: 1rem;
 }
-main #photolibrary h2 {
+main #musicians #photolibrary h2 {
   font-size: 2.5rem;
   margin-bottom: 2rem;
 }
-main #photolibrary .main-photo-gallery-image {
+main #musicians #photolibrary .main-photo-gallery-image {
   width: 100%;
   height: auto;
   border-radius: 0.5rem;
