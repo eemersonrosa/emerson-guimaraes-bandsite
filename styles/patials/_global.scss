@@ -1,20 +1,19 @@
-/* Variables Start */
 /* Font Variables */
-$font-regular: "NunitoSans-Regular";
-$font-medium: "NunitoSans-Medium";
-$font-bold: "NunitoSans-Bold";
+$font-regular: "NunitoSans-Regular", sans-serif;
+$font-medium: "NunitoSans-Medium", sans-serif;
+$font-bold: "NunitoSans-Bold", sans-serif;
 
 /* Colors Variables */
 $primary-color-black: #323232; /* BansSite-Black */
 $primary-color-silver: #afafaf; /* BansSite-Silver */
 $primary-color-white: #ffffff; /* BansSite-White */
 
+/* Secondary Colors */
 $secondary-color-dark-black: #f8f9fa; /* BansSite-DarkBlack */
 $secondary-color-mercury: #e1e1e1; /* BansSite-Mercury */
 $secondary-color-alabaster: #fafafa; /* BansSite-Alabaster */
 
-/* Font Variables */
-
+/* Font Face */
 @font-face {
 	font-family: "NunitoSans-Regular";
 	font-style: normal;
@@ -36,7 +35,7 @@ $secondary-color-alabaster: #fafafa; /* BansSite-Alabaster */
 
 /* Styles Start */
 body {
-	font-family: $font-regular, sans-serif;
+	font-family: $font-regular;
 	margin: 0;
 }
 
@@ -44,29 +43,24 @@ body {
 	background-color: $primary-color-black;
 	display: flex;
 	align-items: center;
+	padding: 0;
 
 	@media screen and (max-width: 1279px) {
 		flex-direction: row;
-		align-items: center;
-		padding: 0;
 	}
 
 	@media screen and (max-width: 767px) {
 		flex-direction: column;
-		align-items: center;
-		padding: 0rem;
 	}
 }
 
 .header-logo {
 	display: flex;
 	align-items: center;
-	padding-left: 2rem;
-	padding-right: 2rem;
+	padding: 0 2rem;
+	margin-left: 3rem;
 
 	@media screen and (max-width: 1279px) {
-		flex-direction: column;
-		align-items: center;
 		margin-left: 2rem;
 		gap: 1rem;
 		max-width: 8rem;
@@ -77,58 +71,44 @@ body {
 		align-items: center;
 		gap: 1rem;
 		padding: 0;
+		margin: 0;
+		justify-content: center;
 	}
 }
 
 .header-logo-image {
-	display: inline-flex;
+	display: block;
 	width: auto;
 	height: auto;
 	object-fit: contain;
 	margin-right: 2rem;
-	padding-left: 7rem;
 
 	@media screen and (max-width: 1279px) {
-		display: flex;
-		flex-direction: column;
-		align-items: center;
 		margin-left: -1rem;
 		width: 9rem;
-		padding-left: 3rem;
 	}
 
 	@media screen and (max-width: 767px) {
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		padding: 1rem;
 		padding-top: 1.5rem;
 		margin-right: 0;
-		gap: 1rem;
 		width: 145%;
 	}
 }
 
 .header-nav-links {
 	list-style-type: none;
-	display: inline-flex;
+	display: flex;
 	gap: 2rem;
-	position: relative;
 	width: 100%;
+	margin: 0;
 
 	@media screen and (max-width: 1279px) {
-		flex-direction: row;
-		align-items: center;
-		margin-left: 2rem;
 		gap: 1.5rem;
 	}
 
 	@media screen and (max-width: 767px) {
-		flex-direction: row;
-		align-items: center;
 		gap: 2rem;
 		font-size: 1.25rem;
-		margin: 0;
 	}
 
 	a {
@@ -138,20 +118,16 @@ body {
 
 	li {
 		display: inline-block;
-		color: $primary-color-silver;
 		text-align: center;
 		padding: 1.5rem;
 		position: relative;
 
 		@media screen and (max-width: 1279px) {
 			font-size: 1.15rem;
-			padding: 1.75rem;
 		}
 
 		@media screen and (max-width: 767px) {
-			font-size: 1.15rem;
 			width: 100%;
-			padding: auto;
 		}
 
 		&::after {
@@ -170,12 +146,8 @@ body {
 		&.active::after {
 			visibility: visible;
 			width: 70%;
-			bottom: 0;
-			left: 50%;
-			transform: translateX(-50%);
 
 			@media screen and (max-width: 1279px) {
-				margin-bottom: 0;
 				width: 60%;
 			}
 
