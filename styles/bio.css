@@ -239,14 +239,12 @@ main #musicians {
   margin-bottom: 4rem;
 }
 main #musicians .main-musicians-container {
-  max-width: 900px;
-  width: 100%;
+  width: auto;
   margin: auto;
 }
 main #musicians .main-musicians-container h2 {
   font-size: 2.5rem;
   margin-bottom: 2rem;
-  margin-left: -9rem;
 }
 main #musicians .main-musicians-container .main-band-show-container {
   display: flex;
@@ -255,8 +253,10 @@ main #musicians .main-musicians-container .main-band-show-container {
   margin-bottom: 2rem;
 }
 main #musicians .main-musicians-container .main-band-show-container .main-band-show-image {
-  max-width: 100%;
-  height: auto;
+  width: 90%;
+  height: 50vh;
+  -o-object-fit: fill;
+     object-fit: fill;
 }
 main #musicians .main-musicians-container .main-band-show-quote {
   padding: 0 2rem;
@@ -264,7 +264,7 @@ main #musicians .main-musicians-container .main-band-show-quote {
   margin-bottom: 3rem;
   border-radius: 0.5rem;
 }
-main #musicians .main-musicians-container .main-band-show-quote .main-band-show-quote-text {
+main #musicians .main-musicians-container .main-band-show-quote jus .main-band-show-quote-text {
   font-size: 1.125rem;
   margin-bottom: 1rem;
   margin-right: 15rem;

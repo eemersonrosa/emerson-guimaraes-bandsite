@@ -79,14 +79,12 @@ main {
 		margin-bottom: 4rem;
 
 		.main-musicians-container {
-			max-width: 900px;
-			width: 100%;
+			width: auto;
 			margin: auto;
 
 			h2 {
 				font-size: 2.5rem;
 				margin-bottom: 2rem;
-				margin-left: -9rem;
 			}
 
 			.main-band-show-container {
@@ -96,8 +94,9 @@ main {
 				margin-bottom: 2rem;
 
 				.main-band-show-image {
-					max-width: 100%;
-					height: auto;
+					width: 90%;
+					height: 50vh;
+					object-fit: fill;
 				}
 			}
 
@@ -106,8 +105,7 @@ main {
 				margin-top: 0;
 				margin-bottom: 3rem;
 				border-radius: 0.5rem;
-
-				.main-band-show-quote-text {
+				jus .main-band-show-quote-text {
 					font-size: 1.125rem;
 					margin-bottom: 1rem;
 					margin-right: 15rem;
