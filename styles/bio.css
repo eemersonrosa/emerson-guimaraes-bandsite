@@ -111,6 +111,7 @@ body {
   display: inline-flex;
   gap: 2rem;
   position: relative;
+  width: 100%;
 }
 @media screen and (max-width: 1279px) {
   .header-nav-links {
@@ -122,36 +123,38 @@ body {
 }
 @media screen and (max-width: 767px) {
   .header-nav-links {
-    display: inline-flex;
     flex-direction: row;
     align-items: center;
-    gap: 4rem;
+    gap: 2rem;
     font-size: 1.25rem;
     margin: 0;
   }
 }
 .header-nav-links a {
-  display: block;
+  text-decoration: none;
+  color: #afafaf;
+}
+.header-nav-links li {
+  display: inline-block;
   color: #afafaf;
   text-align: center;
-  text-decoration: none;
   padding: 1.5rem;
   position: relative;
 }
 @media screen and (max-width: 1279px) {
-  .header-nav-links a {
+  .header-nav-links li {
     font-size: 1.15rem;
     padding: 1.75rem;
   }
 }
 @media screen and (max-width: 767px) {
-  .header-nav-links a {
+  .header-nav-links li {
     font-size: 1.15rem;
-    display: block;
-    padding: 1rem;
+    width: 100%;
+    padding: auto;
   }
 }
-.header-nav-links a::after {
+.header-nav-links li::after {
   content: "";
   position: absolute;
   bottom: 0;
@@ -162,7 +165,7 @@ body {
   background-color: #ffffff;
   visibility: hidden;
 }
-.header-nav-links a:hover::after, .header-nav-links a.active::after {
+.header-nav-links li:hover::after, .header-nav-links li.active::after {
   visibility: visible;
   width: 70%;
   bottom: 0;
@@ -170,16 +173,17 @@ body {
   transform: translateX(-50%);
 }
 @media screen and (max-width: 1279px) {
-  .header-nav-links a:hover::after, .header-nav-links a.active::after {
+  .header-nav-links li:hover::after, .header-nav-links li.active::after {
     margin-bottom: 0;
+    width: 60%;
   }
 }
 @media screen and (max-width: 767px) {
-  .header-nav-links a:hover::after, .header-nav-links a.active::after {
+  .header-nav-links li:hover::after, .header-nav-links li.active::after {
     width: 100%;
   }
 }
-.header-nav-links a:hover, .header-nav-links a.active {
+.header-nav-links li:hover, .header-nav-links li.active {
   color: #ffffff;
   font-family: "NunitoSans-Bold";
 }

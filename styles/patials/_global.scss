@@ -114,6 +114,7 @@ body {
 	display: inline-flex;
 	gap: 2rem;
 	position: relative;
+	width: 100%;
 
 	@media screen and (max-width: 1279px) {
 		flex-direction: row;
@@ -123,19 +124,22 @@ body {
 	}
 
 	@media screen and (max-width: 767px) {
-		display: inline-flex;
 		flex-direction: row;
 		align-items: center;
-		gap: 4rem;
+		gap: 2rem;
 		font-size: 1.25rem;
 		margin: 0;
 	}
 
 	a {
-		display: block;
+		text-decoration: none;
+		color: $primary-color-silver;
+	}
+
+	li {
+		display: inline-block;
 		color: $primary-color-silver;
 		text-align: center;
-		text-decoration: none;
 		padding: 1.5rem;
 		position: relative;
 
@@ -146,8 +150,8 @@ body {
 
 		@media screen and (max-width: 767px) {
 			font-size: 1.15rem;
-			display: block;
-			padding: 1rem;
+			width: 100%;
+			padding: auto;
 		}
 
 		&::after {
@@ -172,6 +176,7 @@ body {
 
 			@media screen and (max-width: 1279px) {
 				margin-bottom: 0;
+				width: 60%;
 			}
 
 			@media screen and (max-width: 767px) {
