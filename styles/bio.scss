@@ -67,3 +67,96 @@
 		}
 	}
 }
+
+main {
+	padding: 4rem 2rem;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
+	#musicians {
+		margin-bottom: 4rem;
+
+		.main-musicians-container {
+			max-width: 900px;
+			width: 100%;
+			margin: auto;
+
+			h2 {
+				font-size: 2.5rem;
+				margin-bottom: 2rem;
+			}
+
+			.main-band-show-container {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				margin-bottom: 2rem;
+
+				.main-band-show-image {
+					max-width: 100%;
+					height: auto;
+				}
+			}
+
+			.main-band-show-quote {
+				padding: 0 2rem;
+				margin-top: 0;
+				margin-bottom: 3rem;
+				border-radius: 0.5rem;
+
+				.main-band-show-quote-text {
+					font-size: 1.125rem;
+					margin-bottom: 1rem;
+					margin-right: 15rem;
+				}
+
+				.main-band-show-quote-author {
+					font-size: 1.1rem;
+				}
+			}
+		}
+
+		.main-band-show-container-text {
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+			gap: 2rem;
+		}
+
+		article {
+			max-width: 60rem;
+			margin: 0 auto 1rem;
+
+			h3 {
+				font-size: 2rem;
+				margin-bottom: 1.5rem;
+			}
+
+			p {
+				font-size: 1.125rem;
+				margin-bottom: 1.5rem;
+			}
+		}
+	}
+
+	#photolibrary {
+		max-width: 1200px;
+		width: 100%;
+		text-align: center;
+
+		h2 {
+			font-size: 2.5rem;
+			margin-bottom: 2rem;
+		}
+
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		gap: 1rem;
+
+		.main-photo-gallery-image {
+			width: 100%;
+			height: auto;
+			border-radius: 0.5rem;
+		}
+	}
+}

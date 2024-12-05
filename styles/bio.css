@@ -226,4 +226,81 @@ body {
     font-size: 1.8rem;
     margin-left: 1rem;
   }
+}
+
+main {
+  padding: 4rem 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+main #musicians {
+  margin-bottom: 4rem;
+}
+main #musicians .main-musicians-container {
+  max-width: 900px;
+  width: 100%;
+  margin: auto;
+}
+main #musicians .main-musicians-container h2 {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+}
+main #musicians .main-musicians-container .main-band-show-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+main #musicians .main-musicians-container .main-band-show-container .main-band-show-image {
+  max-width: 100%;
+  height: auto;
+}
+main #musicians .main-musicians-container .main-band-show-quote {
+  padding: 0 2rem;
+  margin-top: 0;
+  margin-bottom: 3rem;
+  border-radius: 0.5rem;
+}
+main #musicians .main-musicians-container .main-band-show-quote .main-band-show-quote-text {
+  font-size: 1.125rem;
+  margin-bottom: 1rem;
+  margin-right: 15rem;
+}
+main #musicians .main-musicians-container .main-band-show-quote .main-band-show-quote-author {
+  font-size: 1.1rem;
+}
+main #musicians .main-band-show-container-text {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+main #musicians article {
+  max-width: 60rem;
+  margin: 0 auto 1rem;
+}
+main #musicians article h3 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+}
+main #musicians article p {
+  font-size: 1.125rem;
+  margin-bottom: 1.5rem;
+}
+main #photolibrary {
+  max-width: 1200px;
+  width: 100%;
+  text-align: center;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+main #photolibrary h2 {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+}
+main #photolibrary .main-photo-gallery-image {
+  width: 100%;
+  height: auto;
+  border-radius: 0.5rem;
 }/*# sourceMappingURL=bio.css.map */
