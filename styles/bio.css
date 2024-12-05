@@ -167,11 +167,6 @@ body {
   height: 65vh;
   overflow: hidden;
 }
-@media screen and (max-width: 1279px) {
-  .header-container-background {
-    height: auto;
-  }
-}
 .header-container-background .header-container-image-container {
   position: relative;
   width: 100%;
@@ -196,13 +191,6 @@ body {
   left: 50%;
   transform: translate(-50%, -50%);
 }
-@media screen and (max-width: 1279px) {
-  .header-container-background .header-container-image-container .header-container-image {
-    position: relative;
-    transform: none;
-    left: 0;
-  }
-}
 .header-container-background .header-container-text {
   position: absolute;
   top: 50%;
@@ -212,21 +200,9 @@ body {
   color: #ffffff;
   text-align: left;
 }
-@media screen and (max-width: 1279px) {
-  .header-container-background .header-container-text {
-    left: 35%;
-  }
-}
 .header-container-background .header-container-text .header-container-text-h1 {
   font-size: 3.75rem;
   font-family: "NunitoSans-Medium", sans-serif;
-  margin-left: -8rem;
-}
-@media screen and (max-width: 767px) {
-  .header-container-background .header-container-text .header-container-text-h1 {
-    font-size: 1.8rem;
-    margin-left: 1rem;
-  }
 }
 
 main {
@@ -237,14 +213,18 @@ main {
 }
 main #musicians {
   margin-bottom: 4rem;
+  text-align: left;
 }
 main #musicians .main-musicians-container {
-  width: auto;
+  max-width: 70rem;
+  width: 100%;
   margin: auto;
+  padding-left: 2rem;
 }
 main #musicians .main-musicians-container h2 {
   font-size: 2.5rem;
   margin-bottom: 2rem;
+  margin-left: -5rem;
 }
 main #musicians .main-musicians-container .main-band-show-container {
   display: flex;
@@ -253,29 +233,34 @@ main #musicians .main-musicians-container .main-band-show-container {
   margin-bottom: 2rem;
 }
 main #musicians .main-musicians-container .main-band-show-container .main-band-show-image {
-  width: 90%;
-  height: 50vh;
+  width: 100%;
+  height: 55vh;
   -o-object-fit: fill;
      object-fit: fill;
 }
 main #musicians .main-musicians-container .main-band-show-quote {
-  padding: 0 2rem;
+  position: relative;
+  display: block;
+  right: auto;
   margin-top: 0;
-  margin-bottom: 3rem;
-  border-radius: 0.5rem;
+  margin-bottom: 4rem;
 }
-main #musicians .main-musicians-container .main-band-show-quote jus .main-band-show-quote-text {
-  font-size: 1.125rem;
+main #musicians .main-musicians-container .main-band-show-quote .main-band-show-quote-text {
   margin-bottom: 1rem;
-  margin-right: 15rem;
+  font-family: "NunitoSans-Medium", sans-serif;
+  font-size: 1.5rem;
+  text-align: left;
+  margin-right: 20rem;
 }
 main #musicians .main-musicians-container .main-band-show-quote .main-band-show-quote-author {
-  font-size: 1.1rem;
+  font-size: 1rem;
+  text-align: left;
 }
 main #musicians .main-band-show-container-text {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 2rem;
+  padding-left: 2rem;
 }
 main #musicians article {
   max-width: 60rem;
@@ -288,6 +273,8 @@ main #musicians article h3 {
 main #musicians article p {
   font-size: 1.125rem;
   margin-bottom: 1.5rem;
+  line-height: 1.75;
+  text-align: left;
 }
 main #photolibrary {
   max-width: 1200px;
