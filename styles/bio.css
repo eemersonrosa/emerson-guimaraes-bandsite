@@ -220,6 +220,7 @@ body {
 .header-container-background .header-container-text .header-container-text-h1 {
   font-size: 3.75rem;
   font-family: "NunitoSans-Medium", sans-serif;
+  margin-left: -8rem;
 }
 @media screen and (max-width: 767px) {
   .header-container-background .header-container-text .header-container-text-h1 {
