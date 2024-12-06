@@ -313,7 +313,6 @@ footer .footer-container {
 }
 footer .footer-container .footer-get-in-touch {
   min-width: 15rem;
-  margin-bottom: 2rem;
   display: flex;
   align-items: center;
   justify-content: left;
@@ -362,7 +361,7 @@ footer .footer-brand-container {
 footer .footer-brand-container .footer-logo {
   display: block;
   position: relative;
-  margin-top: -21rem;
+  margin-top: -19rem;
   margin-right: 1rem;
 }
 footer .footer-brand-container .footer-logo .footer-logo-image {
