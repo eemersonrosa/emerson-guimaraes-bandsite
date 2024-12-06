@@ -348,6 +348,11 @@ footer .footer-container .footer-contact-info .footer-column h3 {
 footer .footer-container .footer-contact-info .footer-column p {
   margin-bottom: 0.5rem;
 }
+footer .footer-container .footer-copyright {
+  text-align: left;
+  margin-top: 2rem;
+  font-size: 1.125rem;
+}
 footer .footer-brand-container {
   position: relative;
   display: flex;
@@ -357,15 +362,10 @@ footer .footer-brand-container {
 footer .footer-brand-container .footer-logo {
   display: block;
   position: relative;
-  margin-top: -15rem;
+  margin-top: -21rem;
   margin-right: 1rem;
 }
 footer .footer-brand-container .footer-logo .footer-logo-image {
   width: 18vh;
   height: auto;
-}
-footer .footer-copyright {
-  text-align: left;
-  margin-top: 2rem;
-  font-size: 0.875rem;
 }/*# sourceMappingURL=bio.css.map */
