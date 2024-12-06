@@ -305,29 +305,30 @@ footer {
   font-family: "NunitoSans-Regular", sans-serif;
 }
 footer .footer-container {
-  display: flex;
+  display: grid;
   justify-content: space-between;
   align-items: flex-start;
   max-width: 85rem;
   margin: 0 auto;
-  flex-wrap: wrap;
 }
 footer .footer-container .footer-get-in-touch {
-  flex: 2;
   min-width: 15rem;
   margin-bottom: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: left;
 }
 footer .footer-container .footer-get-in-touch h2 {
   font-size: 2.5rem;
-  margin-bottom: 1rem;
 }
 footer .footer-container .footer-get-in-touch .footer-social-icons {
+  margin-left: 4rem;
   display: flex;
-  gap: 1rem;
+  gap: 3rem;
 }
 footer .footer-container .footer-get-in-touch .footer-social-icons .footer-icon img {
-  width: 2rem;
-  height: 2rem;
+  width: 1.75rem;
+  height: 1.75rem;
 }
 footer .footer-container .footer-contact-info {
   flex: 3;
@@ -355,14 +356,6 @@ footer .footer-container .footer-brand {
   align-items: flex-start;
   margin-bottom: 2rem;
 }
-footer .footer-container .footer-brand .footer-logo {
-  display: block;
-  text-align: center;
-}
-footer .footer-container .footer-brand .footer-logo .footer-logo-image {
-  width: 8rem;
-  height: auto;
-}
 footer .footer-container .footer-brand h3 {
   font-size: 2rem;
   font-weight: bold;
@@ -372,4 +365,11 @@ footer .footer-copyright {
   text-align: center;
   margin-top: 2rem;
   font-size: 0.875rem;
+}
+footer .footer-logo {
+  position: relative;
+}
+footer .footer-logo .footer-logo-image {
+  width: 8rem;
+  height: auto;
 }/*# sourceMappingURL=bio.css.map */
