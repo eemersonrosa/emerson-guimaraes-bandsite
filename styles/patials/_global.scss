@@ -18,19 +18,19 @@ $secondary-color-alabaster: #fafafa; /* BansSite-Alabaster */
 	font-family: "NunitoSans-Regular";
 	font-style: normal;
 	font-weight: 400;
-	src: url("../../assets/fonts/NunitoSans-Regular.woff");
+	src: url("../../assets/fonts/NunitoSans-Regular.woff") format("woff");
 }
 
 @font-face {
 	font-family: "NunitoSans-Medium";
 	font-style: normal;
-	src: url("../../assets/fonts/NunitoSans-Medium.woff");
+	src: url("../../assets/fonts/NunitoSans-Medium.woff") format("woff");
 }
 
 @font-face {
 	font-family: "NunitoSans-Bold";
 	font-style: normal;
-	src: url("../../assets/fonts/NunitoSans-Bold.woff");
+	src: url("../../assets/fonts/NunitoSans-Bold.woff") format("woff");
 }
 
 /* Styles Start */
