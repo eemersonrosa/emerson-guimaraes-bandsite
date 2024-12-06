@@ -296,4 +296,80 @@ main .main-photo-gallery-container #photolibrary {
 main .main-photo-gallery-container #photolibrary .main-photo-gallery-image {
   width: 100%;
   height: auto;
+}
+
+footer {
+  background-color: #323232;
+  color: #ffffff;
+  padding: 3rem 2rem;
+  font-family: "NunitoSans-Regular", sans-serif;
+}
+footer .footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  max-width: 85rem;
+  margin: 0 auto;
+  flex-wrap: wrap;
+}
+footer .footer-container .footer-get-in-touch {
+  flex: 2;
+  min-width: 15rem;
+  margin-bottom: 2rem;
+}
+footer .footer-container .footer-get-in-touch h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+footer .footer-container .footer-get-in-touch .footer-social-icons {
+  display: flex;
+  gap: 1rem;
+}
+footer .footer-container .footer-get-in-touch .footer-social-icons .footer-icon img {
+  width: 2rem;
+  height: 2rem;
+}
+footer .footer-container .footer-contact-info {
+  flex: 3;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+footer .footer-container .footer-contact-info .footer-column {
+  flex: 1;
+  min-width: 15rem;
+}
+footer .footer-container .footer-contact-info .footer-column h3 {
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+}
+footer .footer-container .footer-contact-info .footer-column p {
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+}
+footer .footer-container .footer-brand {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  margin-bottom: 2rem;
+}
+footer .footer-container .footer-brand .footer-logo {
+  display: block;
+  text-align: center;
+}
+footer .footer-container .footer-brand .footer-logo .footer-logo-image {
+  width: 8rem;
+  height: auto;
+}
+footer .footer-container .footer-brand h3 {
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: center;
+}
+footer .footer-copyright {
+  text-align: center;
+  margin-top: 2rem;
+  font-size: 0.875rem;
 }/*# sourceMappingURL=bio.css.map */
