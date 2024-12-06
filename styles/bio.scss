@@ -194,54 +194,40 @@ footer {
 		}
 
 		.footer-contact-info {
-			flex: 3;
 			display: flex;
 			justify-content: space-between;
 			flex-wrap: wrap;
+			gap: 3rem;
 
 			.footer-column {
-				flex: 1;
-				min-width: 15rem;
+				width: 18rem;
+				font-size: 0.8rem;
 
 				h3 {
-					font-size: 1.25rem;
-					margin-bottom: 0.5rem;
-					font-weight: bold;
+					margin-bottom: 1.5rem;
+					font-family: $font-regular;
+					font-weight: 100;
 				}
 
 				p {
-					font-size: 1rem;
 					margin-bottom: 0.5rem;
 				}
 			}
 		}
 
-		.footer-brand {
-			flex: 1;
-			display: flex;
-			justify-content: center;
-			align-items: flex-start;
-			margin-bottom: 2rem;
-
-			h3 {
-				font-size: 2rem;
-				font-weight: bold;
-				text-align: center;
-			}
+		.footer-copyright {
+			text-align: center;
+			margin-top: 2rem;
+			font-size: 0.875rem;
 		}
-	}
-	.footer-copyright {
-		text-align: center;
-		margin-top: 2rem;
-		font-size: 0.875rem;
-	}
 
-	.footer-logo {
-		position: relative;
+		.footer-logo {
+			position: relative;
 
-		.footer-logo-image {
-			width: 8rem;
-			height: auto;
+			.footer-logo-image {
+				width: 8rem;
+				height: auto;
+			}
 		}
 	}
 }
