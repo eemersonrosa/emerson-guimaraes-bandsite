@@ -277,20 +277,23 @@ main #musicians .main-band-container-bio p {
   text-align: left;
   font-family: "NunitoSans-Regular", sans-serif;
 }
-main #musicians #photolibrary {
-  max-width: 1200px;
+main .main-photo-gallery-container {
+  max-width: 85rem;
+  display: flex;
+  flex-direction: column;
+}
+main .main-photo-gallery-container .main-h2-title-text {
+  font-size: 36px;
+  margin-bottom: 2rem;
+  text-align: left;
+}
+main .main-photo-gallery-container #photolibrary {
   width: 100%;
-  text-align: center;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 1rem;
 }
-main #musicians #photolibrary h2 {
-  font-size: 2.5rem;
-  margin-bottom: 2rem;
-}
-main #musicians #photolibrary .main-photo-gallery-image {
+main .main-photo-gallery-container #photolibrary .main-photo-gallery-image {
   width: 100%;
   height: auto;
-  border-radius: 0.5rem;
 }/*# sourceMappingURL=bio.css.map */
