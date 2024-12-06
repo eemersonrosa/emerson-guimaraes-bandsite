@@ -232,6 +232,11 @@ main {
   flex-direction: column;
   align-items: center;
 }
+@media screen and (max-width: 1024px) {
+  main {
+    padding: 2rem 6rem;
+  }
+}
 main #musicians {
   margin-bottom: 4rem;
   text-align: left;
@@ -276,6 +281,11 @@ main #musicians .main-band-container-bio .main-band-container-bio-text {
   grid-template-columns: 1fr 1fr;
   gap: 2rem;
 }
+@media screen and (max-width: 1024px) {
+  main #musicians .main-band-container-bio .main-band-container-bio-text {
+    grid-template-columns: 1fr;
+  }
+}
 main #musicians .main-band-container-bio h3 {
   margin-bottom: 1rem;
   font-family: "NunitoSans-Regular", sans-serif;
@@ -301,6 +311,16 @@ main .main-photo-gallery-container #photolibrary {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 1rem;
+}
+@media screen and (max-width: 1024px) {
+  main .main-photo-gallery-container #photolibrary {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media screen and (max-width: 768px) {
+  main .main-photo-gallery-container #photolibrary {
+    grid-template-columns: 1fr;
+  }
 }
 main .main-photo-gallery-container #photolibrary .main-photo-gallery-image {
   width: 100%;

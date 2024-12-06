@@ -79,6 +79,10 @@ main {
 	flex-direction: column;
 	align-items: center;
 
+	@media screen and (max-width: 1024px) {
+		padding: 2rem 6rem;
+	}
+
 	#musicians {
 		margin-bottom: 4rem;
 		text-align: left;
@@ -128,6 +132,9 @@ main {
 				display: grid;
 				grid-template-columns: 1fr 1fr;
 				gap: 2rem;
+				@media screen and (max-width: 1024px) {
+					grid-template-columns: 1fr;
+				}
 			}
 
 			h3 {
@@ -160,6 +167,13 @@ main {
 			display: grid;
 			grid-template-columns: repeat(3, 1fr);
 			gap: 1rem;
+			@media screen and (max-width: 1024px) {
+				grid-template-columns: repeat(2, 1fr);
+			}
+
+			@media screen and (max-width: 768px) {
+				grid-template-columns: 1fr;
+			}
 
 			.main-photo-gallery-image {
 				width: 100%;
