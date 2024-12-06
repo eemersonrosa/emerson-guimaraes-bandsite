@@ -214,20 +214,29 @@ footer {
 				}
 			}
 		}
-
-		.footer-copyright {
-			text-align: center;
-			margin-top: 2rem;
-			font-size: 0.875rem;
-		}
+	}
+	.footer-brand-container {
+		position: relative;
+		display: flex;
+		justify-content: flex-end;
+		align-items: flex-start;
 
 		.footer-logo {
+			display: block;
 			position: relative;
+			margin-top: -15rem;
+			margin-right: 1rem;
 
 			.footer-logo-image {
-				width: 8rem;
+				width: 18vh;
 				height: auto;
 			}
 		}
+	}
+
+	.footer-copyright {
+		text-align: left;
+		margin-top: 2rem;
+		font-size: 0.875rem;
 	}
 }
