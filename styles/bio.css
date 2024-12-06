@@ -204,6 +204,27 @@ body {
   font-size: 3.75rem;
   font-family: "NunitoSans-Medium", sans-serif;
 }
+@media screen and (max-width: 1024px) {
+  .header-container-background {
+    height: 40vh;
+  }
+  .header-container-background .header-container-text {
+    left: 35%;
+    transform: translate(-50%, -50%);
+    text-align: left;
+  }
+  .header-container-background .header-container-text h1 {
+    font-size: 4rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  .header-container-background {
+    height: 40vh;
+  }
+  .header-container-background .header-container-text h1 {
+    font-size: 2rem;
+  }
+}
 
 main {
   padding: 4rem 2rem;

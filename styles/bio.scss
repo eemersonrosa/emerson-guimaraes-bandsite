@@ -47,6 +47,30 @@
 			font-family: $font-medium;
 		}
 	}
+
+	@media screen and (max-width: 1024px) {
+		height: 40vh;
+
+		.header-container-text {
+			left: 35%;
+			transform: translate(-50%, -50%);
+			text-align: left;
+
+			h1 {
+				font-size: 4rem;
+			}
+		}
+	}
+
+	@media screen and (max-width: 768px) {
+		height: 40vh;
+
+		.header-container-text {
+			h1 {
+				font-size: 2rem;
+			}
+		}
+	}
 }
 
 main {
