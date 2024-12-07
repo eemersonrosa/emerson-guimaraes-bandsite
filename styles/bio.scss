@@ -47,6 +47,30 @@
 			font-family: $font-medium;
 		}
 	}
+
+	@media screen and (max-width: 1024px) {
+		height: 40vh;
+
+		.header-container-text {
+			left: 35%;
+			transform: translate(-50%, -50%);
+			text-align: left;
+
+			h1 {
+				font-size: 4rem;
+			}
+		}
+	}
+
+	@media screen and (max-width: 768px) {
+		height: 40vh;
+
+		.header-container-text {
+			h1 {
+				font-size: 2rem;
+			}
+		}
+	}
 }
 
 main {
@@ -54,11 +78,19 @@ main {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+	@media screen and (max-width: 1024px) {
+		padding: 0 2rem;
+	}
 
 	#musicians {
 		margin-bottom: 4rem;
 		text-align: left;
 		max-width: 70rem;
+		padding: 2rem 4rem;
+
+		@media screen and (max-width: 1024px) {
+			margin: 0;
+		}
 
 		.main-musicians-container {
 			margin: 0;
@@ -67,6 +99,10 @@ main {
 			h2 {
 				font-size: 2.5rem;
 				margin-bottom: 2rem;
+
+				@media screen and (max-width: 1024px) {
+					margin-left: -3rem;
+				}
 			}
 
 			.main-band-show-container {
@@ -79,6 +115,9 @@ main {
 					width: 100%;
 					height: 55vh;
 					object-fit: cover;
+					@media screen and (max-width: 1024px) {
+						height: 40%;
+					}
 				}
 			}
 
@@ -104,6 +143,9 @@ main {
 				display: grid;
 				grid-template-columns: 1fr 1fr;
 				gap: 2rem;
+
+				@media screen and (max-width: 1024px) {
+				}
 			}
 
 			h3 {
@@ -114,9 +156,14 @@ main {
 			}
 
 			p {
-				font-size: 1em;
+				font-size: 1rem;
 				margin-bottom: 1.5rem;
 				font-family: $font-regular;
+
+				@media screen and (max-width: 1024px) {
+					font-size: 0.8rem;
+					width: 90%;
+				}
 			}
 		}
 	}
@@ -125,6 +172,10 @@ main {
 		max-width: 85rem;
 		display: flex;
 		flex-direction: column;
+
+		@media screen and (max-width: 1024px) {
+			margin: 0;
+		}
 
 		.main-h2-title-text {
 			font-size: 36px;
@@ -136,6 +187,13 @@ main {
 			display: grid;
 			grid-template-columns: repeat(3, 1fr);
 			gap: 1rem;
+			@media screen and (max-width: 1024px) {
+				grid-template-columns: repeat(3, 1fr);
+			}
+
+			@media screen and (max-width: 768px) {
+				grid-template-columns: 1fr;
+			}
 
 			.main-photo-gallery-image {
 				width: 100%;
