@@ -384,4 +384,54 @@ footer {
 			}
 		}
 	}
+
+	@media screen and (max-width: 768px) {
+		padding: 1rem;
+		.footer-container {
+			display: flex;
+			flex-direction: column;
+			.footer-get-in-touch {
+				display: block;
+				width: 70%;
+				h2 {
+					font-size: 2.25rem;
+					margin-bottom: 1rem;
+				}
+				.footer-social-icons {
+					margin: 0;
+					margin-bottom: 1rem;
+				}
+			}
+
+			.footer-contact-info {
+				gap: 1rem;
+				width: 100%;
+				margin-bottom: 3rem;
+				.footer-column {
+					h3 {
+						font-size: 1rem;
+					}
+
+					p {
+						font-size: 1rem;
+					}
+				}
+			}
+
+			.footer-copyright {
+				font-size: 0.8rem;
+			}
+		}
+
+		.footer-brand-container {
+			position: absolute;
+			.footer-logo {
+				margin-top: -4rem;
+				margin-right: 11.5rem;
+				.footer-logo-image {
+					width: 20vh;
+				}
+			}
+		}
+	}
 }
