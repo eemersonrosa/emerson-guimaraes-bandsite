@@ -515,4 +515,49 @@ footer .footer-brand-container .footer-logo .footer-logo-image {
   footer .footer-brand-container .footer-logo .footer-logo-image {
     width: 12vh;
   }
+}
+@media screen and (max-width: 768px) {
+  footer {
+    padding: 1rem;
+  }
+  footer .footer-container {
+    display: flex;
+    flex-direction: column;
+  }
+  footer .footer-container .footer-get-in-touch {
+    display: block;
+    width: 70%;
+  }
+  footer .footer-container .footer-get-in-touch h2 {
+    font-size: 2.25rem;
+    margin-bottom: 1rem;
+  }
+  footer .footer-container .footer-get-in-touch .footer-social-icons {
+    margin: 0;
+    margin-bottom: 1rem;
+  }
+  footer .footer-container .footer-contact-info {
+    gap: 1rem;
+    width: 100%;
+    margin-bottom: 3rem;
+  }
+  footer .footer-container .footer-contact-info .footer-column h3 {
+    font-size: 1rem;
+  }
+  footer .footer-container .footer-contact-info .footer-column p {
+    font-size: 1rem;
+  }
+  footer .footer-container .footer-copyright {
+    font-size: 0.8rem;
+  }
+  footer .footer-brand-container {
+    position: absolute;
+  }
+  footer .footer-brand-container .footer-logo {
+    margin-top: -4rem;
+    margin-right: 11.5rem;
+  }
+  footer .footer-brand-container .footer-logo .footer-logo-image {
+    width: 20vh;
+  }
 }/*# sourceMappingURL=bio.css.map */
