@@ -219,10 +219,10 @@ body {
 }
 @media screen and (max-width: 768px) {
   .header-container-background {
-    height: 40vh;
+    height: 30vh;
   }
   .header-container-background .header-container-text h1 {
-    font-size: 2rem;
+    font-size: 1.9rem;
   }
 }
 
