@@ -469,6 +469,10 @@ footer .footer-container .footer-contact-info .footer-column h3 {
 footer .footer-container .footer-contact-info .footer-column p {
   margin-bottom: 0.5rem;
 }
+footer .footer-container .footer-contact-info .footer-column p a {
+  text-decoration: none;
+  color: #ffffff;
+}
 footer .footer-container .footer-copyright {
   text-align: left;
   margin-top: 2rem;
@@ -509,6 +513,10 @@ footer .footer-brand-container .footer-logo .footer-logo-image {
   footer .footer-container .footer-contact-info .footer-column p {
     font-size: 0.9rem;
   }
+  footer .footer-container .footer-contact-info .footer-column p a {
+    text-decoration: none;
+    color: #ffffff;
+  }
   footer .footer-container .footer-copyright {
     font-size: 0.9rem;
   }
@@ -546,6 +554,10 @@ footer .footer-brand-container .footer-logo .footer-logo-image {
   }
   footer .footer-container .footer-contact-info .footer-column p {
     font-size: 1rem;
+  }
+  footer .footer-container .footer-contact-info .footer-column p a {
+    text-decoration: none;
+    color: #ffffff;
   }
   footer .footer-container .footer-copyright {
     font-size: 0.8rem;

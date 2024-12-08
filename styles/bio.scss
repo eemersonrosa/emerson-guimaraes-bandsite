@@ -318,6 +318,10 @@ footer {
 
 				p {
 					margin-bottom: 0.5rem;
+					a {
+						text-decoration: none;
+						color: $primary-color-white;
+					}
 				}
 			}
 		}
@@ -367,6 +371,10 @@ footer {
 
 					p {
 						font-size: 0.9rem;
+						a {
+							text-decoration: none;
+							color: $primary-color-white;
+						}
 					}
 				}
 			}
@@ -414,6 +422,10 @@ footer {
 
 					p {
 						font-size: 1rem;
+						a {
+							text-decoration: none;
+							color: $primary-color-white;
+						}
 					}
 				}
 			}
