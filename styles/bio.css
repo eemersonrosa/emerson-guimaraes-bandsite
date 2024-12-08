@@ -484,10 +484,10 @@ footer .footer-brand-container .footer-logo {
   display: block;
   position: relative;
   margin-top: -19rem;
-  margin-right: 1rem;
+  margin-right: 5rem;
 }
 footer .footer-brand-container .footer-logo .footer-logo-image {
-  width: 20vh;
+  width: 17vh;
   height: auto;
 }
 @media screen and (max-width: 1024px) {
