@@ -185,12 +185,12 @@ main {
 			h3 {
 				margin-bottom: 1rem;
 				font-family: $font-regular;
-				font-size: 1.5em;
+				font-size: 1.7em;
 				font-weight: 100;
 
 				@media screen and (max-width: 768px) {
 					margin-bottom: 0;
-					font-size: 1em;
+					font-size: 1.125em;
 				}
 			}
 
@@ -198,10 +198,12 @@ main {
 				font-size: 1rem;
 				margin-bottom: 1.5rem;
 				font-family: $font-regular;
+				line-height: 1.9rem;
 
 				@media screen and (max-width: 1024px) {
-					font-size: 0.8rem;
+					font-size: 1.125rem;
 					width: 90%;
+					line-height: 1.25rem;
 				}
 
 				@media screen and (max-width: 768px) {
@@ -314,7 +316,7 @@ footer {
 
 			.footer-column {
 				width: 18rem;
-				font-size: 0.8rem;
+				font-size: 0.9rem;
 
 				h3 {
 					margin-bottom: 1.5rem;
@@ -335,7 +337,7 @@ footer {
 		.footer-copyright {
 			text-align: left;
 			margin-top: 2rem;
-			font-size: 1.125rem;
+			font-size: 0.9rem;
 		}
 	}
 
@@ -352,7 +354,7 @@ footer {
 			margin-right: 5rem;
 
 			.footer-logo-image {
-				width: 17vh;
+				width: 16vh;
 				height: auto;
 			}
 		}
@@ -392,8 +394,10 @@ footer {
 
 		.footer-brand-container {
 			.footer-logo {
+				position: absolute;
+				margin-right: -1rem;
 				.footer-logo-image {
-					width: 12vh;
+					width: 11vh;
 				}
 			}
 		}
@@ -445,7 +449,7 @@ footer {
 			position: absolute;
 			.footer-logo {
 				margin-top: -4.5rem;
-				margin-right: 11.5rem;
+				margin-right: -9rem;
 				.footer-logo-image {
 					width: 18vh;
 				}
