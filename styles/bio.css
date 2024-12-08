@@ -297,10 +297,17 @@ main #musicians .main-musicians-container .main-band-show-container .main-band-s
 }
 main #musicians .main-musicians-container .main-band-show-quote {
   margin-bottom: 4rem;
+  max-width: 70%;
 }
 @media screen and (max-width: 768px) {
   main #musicians .main-musicians-container .main-band-show-quote {
     margin-bottom: 2rem;
+    max-width: 100%;
+  }
+}
+@media screen and (max-width: 1024px) {
+  main #musicians .main-musicians-container .main-band-show-quote {
+    max-width: 100%;
   }
 }
 main #musicians .main-musicians-container .main-band-show-quote .main-band-show-quote-text {
