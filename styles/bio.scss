@@ -1,1 +1,437 @@
 @use "./patials/global" as *;
+
+.header-container-background {
+	position: relative;
+	width: 100%;
+	height: 65vh;
+	overflow: hidden;
+
+	.header-container-image-container {
+		position: relative;
+		width: 100%;
+		height: 100%;
+		overflow: hidden;
+		display: flex;
+
+		&::before {
+			content: "";
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			background-color: $primary-color-black;
+			opacity: 0.5;
+			z-index: 1;
+		}
+
+		.header-container-image {
+			width: 100%;
+			height: auto;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+		}
+	}
+
+	.header-container-text {
+		position: absolute;
+		top: 50%;
+		left: 20rem;
+		transform: translate(-50%, -50%);
+		z-index: 2;
+		color: $primary-color-white;
+		text-align: left;
+
+		h1 {
+			font-size: 3.75rem;
+			font-family: $font-medium;
+		}
+	}
+
+	@media screen and (max-width: 1024px) {
+		height: 40vh;
+
+		.header-container-text {
+			left: 35%;
+			transform: translate(-50%, -50%);
+			text-align: left;
+
+			h1 {
+				font-size: 4rem;
+			}
+		}
+	}
+
+	@media screen and (max-width: 768px) {
+		height: 30vh;
+
+		.header-container-text {
+			h1 {
+				font-size: 1.9rem;
+			}
+		}
+	}
+}
+
+main {
+	padding: 0rem 2rem;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
+	@media screen and (max-width: 1024px) {
+		padding: 0 2rem;
+	}
+
+	@media screen and (max-width: 768px) {
+		padding: 0;
+	}
+
+	#musicians {
+		text-align: left;
+		max-width: 75%;
+		padding: 2rem 4rem;
+
+		@media screen and (max-width: 1024px) {
+			margin: 0;
+			padding: 0;
+			max-width: 85%;
+		}
+
+		.main-musicians-container {
+			margin: 0;
+			padding: 0;
+
+			h2 {
+				font-size: 2.5rem;
+				margin-bottom: 2rem;
+				margin-left: -6rem;
+
+				@media screen and (max-width: 1024px) {
+					margin-left: -3rem;
+				}
+
+				@media screen and (max-width: 768px) {
+					font-size: 1.75rem;
+					margin-top: 2rem;
+					margin-left: 0;
+					margin-bottom: 1rem;
+				}
+			}
+
+			.main-band-show-container {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				margin-bottom: 2rem;
+
+				.main-band-show-image {
+					width: 100%;
+					height: 70vh;
+					object-fit: fill;
+
+					@media screen and (max-width: 1024px) {
+						object-fit: cover;
+						height: 40%;
+					}
+				}
+			}
+
+			.main-band-show-quote {
+				margin-bottom: 4rem;
+
+				@media screen and (max-width: 768px) {
+					margin-bottom: 2rem;
+				}
+
+				.main-band-show-quote-text {
+					margin-bottom: 1rem;
+					font-family: $font-medium;
+					font-size: 1.5rem;
+
+					@media screen and (max-width: 768px) {
+						font-size: 1.1rem;
+					}
+				}
+
+				.main-band-show-quote-author {
+					font-size: 1rem;
+				}
+			}
+		}
+
+		.main-band-container-bio {
+			margin: 0;
+
+			.main-band-container-bio-text {
+				display: grid;
+				grid-template-columns: 1fr 1fr;
+				gap: 2rem;
+
+				@media screen and (max-width: 1024px) {
+				}
+
+				@media screen and (max-width: 768px) {
+					display: block;
+				}
+			}
+
+			h3 {
+				margin-bottom: 1rem;
+				font-family: $font-regular;
+				font-size: 1.5em;
+				font-weight: 100;
+
+				@media screen and (max-width: 768px) {
+					margin-bottom: 0;
+					font-size: 1em;
+				}
+			}
+
+			p {
+				font-size: 1rem;
+				margin-bottom: 1.5rem;
+				font-family: $font-regular;
+
+				@media screen and (max-width: 1024px) {
+					font-size: 0.8rem;
+					width: 90%;
+				}
+
+				@media screen and (max-width: 768px) {
+					font-size: 1rem;
+				}
+			}
+		}
+	}
+
+	.main-photo-gallery-container {
+		max-width: 75rem;
+		display: flex;
+		flex-direction: column;
+
+		@media screen and (max-width: 1024px) {
+			margin: 0;
+			max-width: 98%;
+		}
+
+		@media screen and (max-width: 768px) {
+			max-width: 90%;
+		}
+
+		.main-h2-title-text {
+			font-size: 2.25rem;
+			margin-bottom: 2rem;
+			margin-right: auto;
+
+			@media screen and (max-width: 1024px) {
+				margin: 0;
+				margin-top: 4rem;
+			}
+
+			@media screen and (max-width: 768px) {
+				margin-top: 0;
+				font-size: 1.75rem;
+				margin-bottom: 1rem;
+			}
+		}
+
+		#photolibrary {
+			width: 100%;
+			display: grid;
+			grid-template-columns: repeat(3, 1fr);
+			gap: 1rem;
+			margin-bottom: 3rem;
+			max-width: 100%;
+			object-fit: contain;
+			margin: 0 auto 4rem auto;
+
+			@media screen and (max-width: 1024px) {
+				grid-template-columns: repeat(3, 1fr);
+				max-width: 100%;
+			}
+
+			@media screen and (max-width: 768px) {
+				grid-template-columns: 1fr;
+				gap: 1.5rem;
+				margin: 0 auto 1.5rem auto;
+			}
+
+			.main-photo-gallery-image {
+				width: 100%;
+				height: auto;
+			}
+		}
+	}
+}
+
+footer {
+	background-color: $primary-color-black;
+	color: $primary-color-white;
+	padding: 3rem 2rem;
+	font-family: $font-regular;
+
+	.footer-container {
+		display: grid;
+		justify-content: space-between;
+		align-items: flex-start;
+		max-width: 85rem;
+		margin: 0 auto;
+
+		.footer-get-in-touch {
+			min-width: 15rem;
+			display: flex;
+			align-items: center;
+			justify-content: left;
+
+			h2 {
+				font-size: 2.5rem;
+			}
+
+			.footer-social-icons {
+				margin-left: 4rem;
+				display: flex;
+				gap: 3rem;
+
+				.footer-icon img {
+					width: 1.75rem;
+					height: 1.75rem;
+				}
+			}
+		}
+
+		.footer-contact-info {
+			display: flex;
+			justify-content: space-between;
+			flex-wrap: wrap;
+			gap: 3rem;
+
+			.footer-column {
+				width: 18rem;
+				font-size: 0.8rem;
+
+				h3 {
+					margin-bottom: 1.5rem;
+					font-family: $font-regular;
+					font-weight: 100;
+				}
+
+				p {
+					margin-bottom: 0.5rem;
+				}
+			}
+		}
+
+		.footer-copyright {
+			text-align: left;
+			margin-top: 2rem;
+			font-size: 1.125rem;
+		}
+	}
+
+	.footer-brand-container {
+		position: relative;
+		display: flex;
+		justify-content: flex-end;
+		align-items: flex-start;
+
+		.footer-logo {
+			display: block;
+			position: relative;
+			margin-top: -19rem;
+			margin-right: 5rem;
+
+			.footer-logo-image {
+				width: 17vh;
+				height: auto;
+			}
+		}
+	}
+
+	@media screen and (max-width: 1024px) {
+		.footer-container {
+			.footer-get-in-touch {
+				width: 65%;
+				.footer-social-icons {
+					gap: 2rem;
+				}
+			}
+
+			.footer-contact-info {
+				width: 100%;
+				.footer-column {
+					width: auto;
+					h3 {
+						font-size: 0.9rem;
+					}
+
+					p {
+						font-size: 0.9rem;
+					}
+				}
+			}
+
+			.footer-copyright {
+				font-size: 0.9rem;
+			}
+		}
+
+		.footer-brand-container {
+			.footer-logo {
+				.footer-logo-image {
+					width: 12vh;
+				}
+			}
+		}
+	}
+
+	@media screen and (max-width: 768px) {
+		padding: 1rem;
+		.footer-container {
+			display: flex;
+			flex-direction: column;
+			.footer-get-in-touch {
+				display: block;
+				width: 70%;
+				h2 {
+					font-size: 2.25rem;
+					margin-bottom: 1rem;
+				}
+				.footer-social-icons {
+					margin: 0;
+					margin-bottom: 1rem;
+				}
+			}
+
+			.footer-contact-info {
+				gap: 1rem;
+				width: 100%;
+				margin-bottom: 3rem;
+				.footer-column {
+					h3 {
+						font-size: 1rem;
+					}
+
+					p {
+						font-size: 1rem;
+					}
+				}
+			}
+
+			.footer-copyright {
+				font-size: 0.8rem;
+			}
+		}
+
+		.footer-brand-container {
+			position: absolute;
+			.footer-logo {
+				margin-top: -4.5rem;
+				margin-right: 11.5rem;
+				.footer-logo-image {
+					width: 18vh;
+				}
+			}
+		}
+	}
+}

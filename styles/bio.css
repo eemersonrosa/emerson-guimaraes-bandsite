@@ -1,31 +1,563 @@
-/* Variables Start */
 /* Font Variables */
 /* Colors Variables */
 /* BansSite-Black */
 /* BansSite-Silver */
 /* BansSite-White */
+/* Secondary Colors */
 /* BansSite-DarkBlack */
 /* BansSite-Mercury */
 /* BansSite-Alabaster */
-/* Font Variables */
+/* Font Face */
 @font-face {
   font-family: "NunitoSans-Regular";
   font-style: normal;
   font-weight: 400;
-  src: url("../../assets/fonts/NunitoSans-Regular.woff");
+  src: url("../../assets/fonts/NunitoSans-Regular.woff") format("woff");
 }
 @font-face {
   font-family: "NunitoSans-Medium";
   font-style: normal;
-  src: url("../../assets/fonts/NunitoSans-Medium.woff");
+  src: url("../../assets/fonts/NunitoSans-Medium.woff") format("woff");
 }
 @font-face {
   font-family: "NunitoSans-Bold";
   font-style: normal;
-  src: url("../../assets/fonts/NunitoSans-Bold.woff");
+  src: url("../../assets/fonts/NunitoSans-Bold.woff") format("woff");
 }
 /* Styles Start */
 body {
   font-family: "NunitoSans-Regular", sans-serif;
   margin: 0;
+}
+
+.header-nav {
+  background-color: #323232;
+  display: flex;
+  align-items: center;
+  padding: 0;
+}
+@media screen and (max-width: 1279px) {
+  .header-nav {
+    flex-direction: row;
+  }
+}
+@media screen and (max-width: 767px) {
+  .header-nav {
+    flex-direction: column;
+  }
+}
+
+.header-logo {
+  display: flex;
+  align-items: center;
+  padding: 0 2rem;
+  margin-left: 3rem;
+}
+@media screen and (max-width: 1279px) {
+  .header-logo {
+    margin-left: 2rem;
+    gap: 1rem;
+    max-width: 8rem;
+  }
+}
+@media screen and (max-width: 767px) {
+  .header-logo {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    padding: 0;
+    margin: 0;
+    justify-content: center;
+  }
+}
+
+.header-logo-image {
+  display: block;
+  width: auto;
+  height: auto;
+  -o-object-fit: contain;
+     object-fit: contain;
+  margin-right: 2rem;
+}
+@media screen and (max-width: 1279px) {
+  .header-logo-image {
+    margin-left: -1rem;
+    width: 9rem;
+  }
+}
+@media screen and (max-width: 767px) {
+  .header-logo-image {
+    padding-top: 1.5rem;
+    margin-right: 0;
+    width: 145%;
+  }
+}
+
+.header-nav-links {
+  list-style-type: none;
+  display: flex;
+  gap: 2rem;
+  width: 100%;
+  margin: 0;
+}
+@media screen and (max-width: 1279px) {
+  .header-nav-links {
+    gap: 1.5rem;
+  }
+}
+@media screen and (max-width: 767px) {
+  .header-nav-links {
+    gap: 2rem;
+    font-size: 1.25rem;
+  }
+}
+.header-nav-links a {
+  text-decoration: none;
+  color: #afafaf;
+}
+.header-nav-links li {
+  display: inline-block;
+  text-align: center;
+  padding: 1.5rem;
+  position: relative;
+}
+@media screen and (max-width: 1279px) {
+  .header-nav-links li {
+    font-size: 1.15rem;
+  }
+}
+@media screen and (max-width: 767px) {
+  .header-nav-links li {
+    width: 100%;
+  }
+}
+.header-nav-links li::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 1rem;
+  height: 0.25rem;
+  background-color: #ffffff;
+  visibility: hidden;
+}
+.header-nav-links li:hover::after, .header-nav-links li.active::after {
+  visibility: visible;
+  width: 70%;
+}
+@media screen and (max-width: 1279px) {
+  .header-nav-links li:hover::after, .header-nav-links li.active::after {
+    width: 60%;
+  }
+}
+@media screen and (max-width: 767px) {
+  .header-nav-links li:hover::after, .header-nav-links li.active::after {
+    width: 100%;
+  }
+}
+.header-nav-links li:hover, .header-nav-links li.active {
+  color: #ffffff;
+  font-family: "NunitoSans-Bold", sans-serif;
+}
+
+.header-container-background {
+  position: relative;
+  width: 100%;
+  height: 65vh;
+  overflow: hidden;
+}
+.header-container-background .header-container-image-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  display: flex;
+}
+.header-container-background .header-container-image-container::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #323232;
+  opacity: 0.5;
+  z-index: 1;
+}
+.header-container-background .header-container-image-container .header-container-image {
+  width: 100%;
+  height: auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.header-container-background .header-container-text {
+  position: absolute;
+  top: 50%;
+  left: 20rem;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  color: #ffffff;
+  text-align: left;
+}
+.header-container-background .header-container-text h1 {
+  font-size: 3.75rem;
+  font-family: "NunitoSans-Medium", sans-serif;
+}
+@media screen and (max-width: 1024px) {
+  .header-container-background {
+    height: 40vh;
+  }
+  .header-container-background .header-container-text {
+    left: 35%;
+    transform: translate(-50%, -50%);
+    text-align: left;
+  }
+  .header-container-background .header-container-text h1 {
+    font-size: 4rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  .header-container-background {
+    height: 30vh;
+  }
+  .header-container-background .header-container-text h1 {
+    font-size: 1.9rem;
+  }
+}
+
+main {
+  padding: 0rem 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+@media screen and (max-width: 1024px) {
+  main {
+    padding: 0 2rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  main {
+    padding: 0;
+  }
+}
+main #musicians {
+  text-align: left;
+  max-width: 75%;
+  padding: 2rem 4rem;
+}
+@media screen and (max-width: 1024px) {
+  main #musicians {
+    margin: 0;
+    padding: 0;
+    max-width: 85%;
+  }
+}
+main #musicians .main-musicians-container {
+  margin: 0;
+  padding: 0;
+}
+main #musicians .main-musicians-container h2 {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  margin-left: -6rem;
+}
+@media screen and (max-width: 1024px) {
+  main #musicians .main-musicians-container h2 {
+    margin-left: -3rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  main #musicians .main-musicians-container h2 {
+    font-size: 1.75rem;
+    margin-top: 2rem;
+    margin-left: 0;
+    margin-bottom: 1rem;
+  }
+}
+main #musicians .main-musicians-container .main-band-show-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+main #musicians .main-musicians-container .main-band-show-container .main-band-show-image {
+  width: 100%;
+  height: 70vh;
+  -o-object-fit: fill;
+     object-fit: fill;
+}
+@media screen and (max-width: 1024px) {
+  main #musicians .main-musicians-container .main-band-show-container .main-band-show-image {
+    -o-object-fit: cover;
+       object-fit: cover;
+    height: 40%;
+  }
+}
+main #musicians .main-musicians-container .main-band-show-quote {
+  margin-bottom: 4rem;
+}
+@media screen and (max-width: 768px) {
+  main #musicians .main-musicians-container .main-band-show-quote {
+    margin-bottom: 2rem;
+  }
+}
+main #musicians .main-musicians-container .main-band-show-quote .main-band-show-quote-text {
+  margin-bottom: 1rem;
+  font-family: "NunitoSans-Medium", sans-serif;
+  font-size: 1.5rem;
+}
+@media screen and (max-width: 768px) {
+  main #musicians .main-musicians-container .main-band-show-quote .main-band-show-quote-text {
+    font-size: 1.1rem;
+  }
+}
+main #musicians .main-musicians-container .main-band-show-quote .main-band-show-quote-author {
+  font-size: 1rem;
+}
+main #musicians .main-band-container-bio {
+  margin: 0;
+}
+main #musicians .main-band-container-bio .main-band-container-bio-text {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+@media screen and (max-width: 768px) {
+  main #musicians .main-band-container-bio .main-band-container-bio-text {
+    display: block;
+  }
+}
+main #musicians .main-band-container-bio h3 {
+  margin-bottom: 1rem;
+  font-family: "NunitoSans-Regular", sans-serif;
+  font-size: 1.5em;
+  font-weight: 100;
+}
+@media screen and (max-width: 768px) {
+  main #musicians .main-band-container-bio h3 {
+    margin-bottom: 0;
+    font-size: 1em;
+  }
+}
+main #musicians .main-band-container-bio p {
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+  font-family: "NunitoSans-Regular", sans-serif;
+}
+@media screen and (max-width: 1024px) {
+  main #musicians .main-band-container-bio p {
+    font-size: 0.8rem;
+    width: 90%;
+  }
+}
+@media screen and (max-width: 768px) {
+  main #musicians .main-band-container-bio p {
+    font-size: 1rem;
+  }
+}
+main .main-photo-gallery-container {
+  max-width: 75rem;
+  display: flex;
+  flex-direction: column;
+}
+@media screen and (max-width: 1024px) {
+  main .main-photo-gallery-container {
+    margin: 0;
+    max-width: 98%;
+  }
+}
+@media screen and (max-width: 768px) {
+  main .main-photo-gallery-container {
+    max-width: 90%;
+  }
+}
+main .main-photo-gallery-container .main-h2-title-text {
+  font-size: 2.25rem;
+  margin-bottom: 2rem;
+  margin-right: auto;
+}
+@media screen and (max-width: 1024px) {
+  main .main-photo-gallery-container .main-h2-title-text {
+    margin: 0;
+    margin-top: 4rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  main .main-photo-gallery-container .main-h2-title-text {
+    margin-top: 0;
+    font-size: 1.75rem;
+    margin-bottom: 1rem;
+  }
+}
+main .main-photo-gallery-container #photolibrary {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  margin-bottom: 3rem;
+  max-width: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+  margin: 0 auto 4rem auto;
+}
+@media screen and (max-width: 1024px) {
+  main .main-photo-gallery-container #photolibrary {
+    grid-template-columns: repeat(3, 1fr);
+    max-width: 100%;
+  }
+}
+@media screen and (max-width: 768px) {
+  main .main-photo-gallery-container #photolibrary {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    margin: 0 auto 1.5rem auto;
+  }
+}
+main .main-photo-gallery-container #photolibrary .main-photo-gallery-image {
+  width: 100%;
+  height: auto;
+}
+
+footer {
+  background-color: #323232;
+  color: #ffffff;
+  padding: 3rem 2rem;
+  font-family: "NunitoSans-Regular", sans-serif;
+}
+footer .footer-container {
+  display: grid;
+  justify-content: space-between;
+  align-items: flex-start;
+  max-width: 85rem;
+  margin: 0 auto;
+}
+footer .footer-container .footer-get-in-touch {
+  min-width: 15rem;
+  display: flex;
+  align-items: center;
+  justify-content: left;
+}
+footer .footer-container .footer-get-in-touch h2 {
+  font-size: 2.5rem;
+}
+footer .footer-container .footer-get-in-touch .footer-social-icons {
+  margin-left: 4rem;
+  display: flex;
+  gap: 3rem;
+}
+footer .footer-container .footer-get-in-touch .footer-social-icons .footer-icon img {
+  width: 1.75rem;
+  height: 1.75rem;
+}
+footer .footer-container .footer-contact-info {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 3rem;
+}
+footer .footer-container .footer-contact-info .footer-column {
+  width: 18rem;
+  font-size: 0.8rem;
+}
+footer .footer-container .footer-contact-info .footer-column h3 {
+  margin-bottom: 1.5rem;
+  font-family: "NunitoSans-Regular", sans-serif;
+  font-weight: 100;
+}
+footer .footer-container .footer-contact-info .footer-column p {
+  margin-bottom: 0.5rem;
+}
+footer .footer-container .footer-copyright {
+  text-align: left;
+  margin-top: 2rem;
+  font-size: 1.125rem;
+}
+footer .footer-brand-container {
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start;
+}
+footer .footer-brand-container .footer-logo {
+  display: block;
+  position: relative;
+  margin-top: -19rem;
+  margin-right: 5rem;
+}
+footer .footer-brand-container .footer-logo .footer-logo-image {
+  width: 17vh;
+  height: auto;
+}
+@media screen and (max-width: 1024px) {
+  footer .footer-container .footer-get-in-touch {
+    width: 65%;
+  }
+  footer .footer-container .footer-get-in-touch .footer-social-icons {
+    gap: 2rem;
+  }
+  footer .footer-container .footer-contact-info {
+    width: 100%;
+  }
+  footer .footer-container .footer-contact-info .footer-column {
+    width: auto;
+  }
+  footer .footer-container .footer-contact-info .footer-column h3 {
+    font-size: 0.9rem;
+  }
+  footer .footer-container .footer-contact-info .footer-column p {
+    font-size: 0.9rem;
+  }
+  footer .footer-container .footer-copyright {
+    font-size: 0.9rem;
+  }
+  footer .footer-brand-container .footer-logo .footer-logo-image {
+    width: 12vh;
+  }
+}
+@media screen and (max-width: 768px) {
+  footer {
+    padding: 1rem;
+  }
+  footer .footer-container {
+    display: flex;
+    flex-direction: column;
+  }
+  footer .footer-container .footer-get-in-touch {
+    display: block;
+    width: 70%;
+  }
+  footer .footer-container .footer-get-in-touch h2 {
+    font-size: 2.25rem;
+    margin-bottom: 1rem;
+  }
+  footer .footer-container .footer-get-in-touch .footer-social-icons {
+    margin: 0;
+    margin-bottom: 1rem;
+  }
+  footer .footer-container .footer-contact-info {
+    gap: 1rem;
+    width: 100%;
+    margin-bottom: 3rem;
+  }
+  footer .footer-container .footer-contact-info .footer-column h3 {
+    font-size: 1rem;
+  }
+  footer .footer-container .footer-contact-info .footer-column p {
+    font-size: 1rem;
+  }
+  footer .footer-container .footer-copyright {
+    font-size: 0.8rem;
+  }
+  footer .footer-brand-container {
+    position: absolute;
+  }
+  footer .footer-brand-container .footer-logo {
+    margin-top: -4.5rem;
+    margin-right: 11.5rem;
+  }
+  footer .footer-brand-container .footer-logo .footer-logo-image {
+    width: 18vh;
+  }
 }/*# sourceMappingURL=bio.css.map */
