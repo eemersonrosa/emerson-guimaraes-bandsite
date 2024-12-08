@@ -297,10 +297,17 @@ main #musicians .main-musicians-container .main-band-show-container .main-band-s
 }
 main #musicians .main-musicians-container .main-band-show-quote {
   margin-bottom: 4rem;
+  max-width: 70%;
 }
 @media screen and (max-width: 768px) {
   main #musicians .main-musicians-container .main-band-show-quote {
     margin-bottom: 2rem;
+    max-width: 100%;
+  }
+}
+@media screen and (max-width: 1024px) {
+  main #musicians .main-musicians-container .main-band-show-quote {
+    max-width: 100%;
   }
 }
 main #musicians .main-musicians-container .main-band-show-quote .main-band-show-quote-text {
@@ -332,24 +339,26 @@ main #musicians .main-band-container-bio .main-band-container-bio-text {
 main #musicians .main-band-container-bio h3 {
   margin-bottom: 1rem;
   font-family: "NunitoSans-Regular", sans-serif;
-  font-size: 1.5em;
+  font-size: 1.7em;
   font-weight: 100;
 }
 @media screen and (max-width: 768px) {
   main #musicians .main-band-container-bio h3 {
     margin-bottom: 0;
-    font-size: 1em;
+    font-size: 1.125em;
   }
 }
 main #musicians .main-band-container-bio p {
   font-size: 1rem;
   margin-bottom: 1.5rem;
   font-family: "NunitoSans-Regular", sans-serif;
+  line-height: 1.9rem;
 }
 @media screen and (max-width: 1024px) {
   main #musicians .main-band-container-bio p {
-    font-size: 0.8rem;
+    font-size: 1.125rem;
     width: 90%;
+    line-height: 1.25rem;
   }
 }
 @media screen and (max-width: 768px) {
@@ -459,7 +468,7 @@ footer .footer-container .footer-contact-info {
 }
 footer .footer-container .footer-contact-info .footer-column {
   width: 18rem;
-  font-size: 0.8rem;
+  font-size: 0.9rem;
 }
 footer .footer-container .footer-contact-info .footer-column h3 {
   margin-bottom: 1.5rem;
@@ -476,7 +485,7 @@ footer .footer-container .footer-contact-info .footer-column p a {
 footer .footer-container .footer-copyright {
   text-align: left;
   margin-top: 2rem;
-  font-size: 1.125rem;
+  font-size: 0.9rem;
 }
 footer .footer-brand-container {
   position: relative;
@@ -491,7 +500,7 @@ footer .footer-brand-container .footer-logo {
   margin-right: 5rem;
 }
 footer .footer-brand-container .footer-logo .footer-logo-image {
-  width: 17vh;
+  width: 16vh;
   height: auto;
 }
 @media screen and (max-width: 1024px) {
@@ -520,8 +529,12 @@ footer .footer-brand-container .footer-logo .footer-logo-image {
   footer .footer-container .footer-copyright {
     font-size: 0.9rem;
   }
+  footer .footer-brand-container .footer-logo {
+    position: absolute;
+    margin-right: -1rem;
+  }
   footer .footer-brand-container .footer-logo .footer-logo-image {
-    width: 12vh;
+    width: 11vh;
   }
 }
 @media screen and (max-width: 768px) {
@@ -567,7 +580,7 @@ footer .footer-brand-container .footer-logo .footer-logo-image {
   }
   footer .footer-brand-container .footer-logo {
     margin-top: -4.5rem;
-    margin-right: 11.5rem;
+    margin-right: -9rem;
   }
   footer .footer-brand-container .footer-logo .footer-logo-image {
     width: 18vh;
