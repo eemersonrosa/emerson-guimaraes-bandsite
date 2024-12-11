@@ -1,1 +1,74 @@
 @use "./patials/global" as *;
+
+.header-container-background {
+	position: relative;
+	width: 100%;
+	height: 65vh;
+	overflow: hidden;
+
+	.header-container-image-container {
+		position: relative;
+		width: 100%;
+		height: 100%;
+		overflow: hidden;
+		display: flex;
+
+		&::before {
+			content: "";
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			background-color: $primary-color-black;
+			opacity: 0.5;
+			z-index: 1;
+		}
+
+		.header-container-image {
+			width: 100%;
+			height: auto;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+		}
+	}
+
+	.header-container-text {
+		position: absolute;
+		top: 50%;
+		left: 20rem;
+		transform: translate(-50%, -50%);
+		z-index: 2;
+		color: $primary-color-white;
+		text-align: left;
+
+		h1 {
+			font-size: 3.75rem;
+			font-family: $font-medium;
+		}
+	}
+
+	@media screen and (max-width: 1024px) {
+		height: 40vh;
+
+		.header-container-text {
+			left: 35%;
+			transform: translate(-50%, -50%);
+			text-align: left;
+
+			h1 {
+				font-size: 4rem;
+			}
+		}
+	}
+
+	@media screen and (max-width: 768px) {
+		height: 30vh;
+
+		.header-container-text {
+			h1 {
+				font-size: 1.9rem;
+			}
+		}
+	}
+}

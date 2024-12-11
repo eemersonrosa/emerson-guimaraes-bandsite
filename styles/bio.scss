@@ -271,189 +271,91 @@ main {
 			}
 		}
 	}
-}
 
-footer {
-	background-color: $primary-color-black;
-	color: $primary-color-white;
-	padding: 3rem 2rem;
-	font-family: $font-regular;
-
-	.footer-container {
-		display: grid;
-		justify-content: space-between;
-		align-items: flex-start;
-		max-width: 85rem;
-		margin: 0 auto;
-
-		.footer-get-in-touch {
-			min-width: 15rem;
-			display: flex;
-			align-items: center;
-			justify-content: left;
-
-			h2 {
-				font-size: 2.5rem;
-			}
-
-			.footer-social-icons {
-				margin-left: 4rem;
-				display: flex;
-				gap: 3rem;
-
-				.footer-icon img {
-					width: 1.75rem;
-					height: 1.75rem;
-				}
-			}
+	#comments-section {
+		.comments-section {
+			max-width: 600px;
+			margin: 0 auto;
+			padding: 2rem;
 		}
 
-		.footer-contact-info {
-			display: flex;
-			justify-content: space-between;
-			flex-wrap: wrap;
-			gap: 3rem;
-
-			.footer-column {
-				width: 18rem;
-				font-size: 0.9rem;
-
-				h3 {
-					margin-bottom: 1.5rem;
-					font-family: $font-regular;
-					font-weight: 100;
-				}
-
-				p {
-					margin-bottom: 0.5rem;
-					a {
-						text-decoration: none;
-						color: $primary-color-white;
-					}
-				}
-			}
+		.comments-section h2 {
+			font-size: 2rem;
+			margin-bottom: 1.5rem;
 		}
 
-		.footer-copyright {
-			text-align: left;
-			margin-top: 2rem;
-			font-size: 0.9rem;
-		}
-	}
-
-	.footer-brand-container {
-		position: relative;
-		display: flex;
-		justify-content: flex-end;
-		align-items: flex-start;
-
-		.footer-logo {
-			display: block;
-			position: relative;
-			margin-top: -19rem;
-			margin-right: 5rem;
-
-			.footer-logo-image {
-				width: 16vh;
-				height: auto;
-			}
-		}
-	}
-
-	@media screen and (max-width: 1024px) {
-		.footer-container {
-			.footer-get-in-touch {
-				width: 65%;
-				.footer-social-icons {
-					gap: 2rem;
-				}
-			}
-
-			.footer-contact-info {
-				width: 100%;
-				.footer-column {
-					width: auto;
-					h3 {
-						font-size: 0.9rem;
-					}
-
-					p {
-						font-size: 0.9rem;
-						a {
-							text-decoration: none;
-							color: $primary-color-white;
-						}
-					}
-				}
-			}
-
-			.footer-copyright {
-				font-size: 0.9rem;
-			}
-		}
-
-		.footer-brand-container {
-			.footer-logo {
-				position: absolute;
-				margin-right: -1rem;
-				.footer-logo-image {
-					width: 11vh;
-				}
-			}
-		}
-	}
-
-	@media screen and (max-width: 768px) {
-		padding: 1rem;
-		.footer-container {
+		form {
 			display: flex;
 			flex-direction: column;
-			.footer-get-in-touch {
-				display: block;
-				width: 70%;
-				h2 {
-					font-size: 2.25rem;
-					margin-bottom: 1rem;
-				}
-				.footer-social-icons {
-					margin: 0;
-					margin-bottom: 1rem;
-				}
-			}
-
-			.footer-contact-info {
-				gap: 1rem;
-				width: 100%;
-				margin-bottom: 3rem;
-				.footer-column {
-					h3 {
-						font-size: 1rem;
-					}
-
-					p {
-						font-size: 1rem;
-						a {
-							text-decoration: none;
-							color: $primary-color-white;
-						}
-					}
-				}
-			}
-
-			.footer-copyright {
-				font-size: 0.8rem;
-			}
+			gap: 1rem;
+			margin-bottom: 2rem;
 		}
 
-		.footer-brand-container {
-			position: absolute;
-			.footer-logo {
-				margin-top: -4.5rem;
-				margin-right: -9rem;
-				.footer-logo-image {
-					width: 18vh;
-				}
-			}
+		form label {
+			font-size: 0.9rem;
+			font-weight: bold;
+			margin-bottom: 0.2rem;
+		}
+
+		form input,
+		form textarea {
+			width: 100%;
+			padding: 0.75rem;
+			border: 1px solid #ccc;
+			border-radius: 4px;
+			font-size: 1rem;
+			font-family: inherit;
+		}
+
+		form button {
+			align-self: flex-end;
+			background-color: #333;
+			color: white;
+			padding: 0.75rem 1.5rem;
+			border: none;
+			border-radius: 4px;
+			font-size: 1rem;
+			cursor: pointer;
+		}
+
+		form button:hover {
+			background-color: #555;
+		}
+
+		#comments-list {
+			margin-top: 2rem;
+		}
+
+		.comment {
+			display: flex;
+			align-items: flex-start;
+			gap: 1rem;
+			padding: 1rem 0;
+			border-top: 1px solid #eaeaea;
+		}
+
+		.comment img {
+			width: 50px;
+			height: 50px;
+			border-radius: 50%;
+			object-fit: cover;
+		}
+
+		.comment h3 {
+			margin: 0;
+			font-size: 1rem;
+			font-weight: bold;
+		}
+
+		.comment small {
+			font-size: 0.8rem;
+			color: #888;
+		}
+
+		.comment p {
+			margin: 0.5rem 0 0 0;
+			font-size: 0.9rem;
+			line-height: 1.5;
 		}
 	}
 }
