@@ -382,4 +382,69 @@ footer .footer-brand-container .footer-logo .footer-logo-image {
   .header-container-background .header-container-text h1 {
     font-size: 1.9rem;
   }
+}
+
+main #soundcloud-section {
+  margin: 2rem 0;
+}
+main #soundcloud-section iframe {
+  border-radius: 4px;
+}
+main .shows-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+main .show-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  background-color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+main .show-item:hover {
+  background-color: #f9f9f9;
+  border-color: #bbb;
+}
+main .show-item.selected {
+  background-color: #333;
+  color: #fff;
+  border-color: #333;
+}
+main .show-item.selected .buy-tickets {
+  background-color: #ff5500;
+  color: #fff;
+}
+main .show-item p {
+  margin: 0;
+  flex: 1;
+  text-align: left;
+}
+main .show-item p.show-date {
+  font-weight: bold;
+  flex: 2;
+}
+main .show-item p.show-venue {
+  text-align: center;
+  flex: 2;
+}
+main .show-item p.show-location {
+  text-align: right;
+  flex: 2;
+}
+main .show-item .buy-tickets {
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 4px;
+  background-color: #333;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+main .show-item .buy-tickets:hover {
+  background-color: #555;
 }/*# sourceMappingURL=shows.css.map */
