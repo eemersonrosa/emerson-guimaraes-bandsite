@@ -1,3 +1,4 @@
+// Array of comments data
 const comments = [
 	{
 		name: "Victor Pinto",
@@ -16,6 +17,13 @@ const comments = [
 	},
 ];
 
+/**
+ * Function to render a single comment.
+ * @param {Object} comment - The comment data object.
+ * @param {string} comment.name - The name of the commenter.
+ * @param {string} comment.timestamp - The timestamp of the comment.
+ * @param {string} comment.text - The text of the comment.
+ */
 function renderComment(comment) {
 	const commentsList = document.getElementById("comments-default-list");
 
@@ -48,12 +56,22 @@ function renderComment(comment) {
 	commentsList.appendChild(commentDiv);
 }
 
+/**
+ * Function to render all comments.
+ */
 function renderComments() {
 	const commentsList = document.getElementById("comments-default-list");
-	commentsList.innerHTML = "";
-	comments.forEach(renderComment);
+	commentsList.innerHTML = ""; // Clear existing comments
+	comments.forEach(renderComment); // Render each comment
 }
 
+// Initial render of comments on page load
+renderComments();
+
+/**
+ * Event listener for the comment form submission.
+ * Prevents the default form submission behavior and adds a new comment.
+ */
 document
 	.getElementById("comment-form")
 	.addEventListener("submit", function (e) {
@@ -68,11 +86,10 @@ document
 			text: commentInput.value,
 		};
 
-		comments.push(newComment);
-		renderComments();
+		comments.push(newComment); // Add new comment to the comments array
+		renderComments(); // Re-render comments
 
+		// Clear form inputs
 		nameInput.value = "";
 		commentInput.value = "";
 	});
-
-renderComments();

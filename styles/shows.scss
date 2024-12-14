@@ -66,6 +66,10 @@
 		height: 30vh;
 
 		.header-container-text {
+			left: 50%;
+			transform: translate(-50%, -50%);
+			text-align: center;
+
 			h1 {
 				font-size: 1.9rem;
 			}
@@ -74,79 +78,90 @@
 }
 
 main {
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+	height: 75vh;
+	width: auto;
+
 	#soundcloud-section {
 		margin: 2rem 0;
 
 		iframe {
-			border-radius: 4px;
+			border-radius: 0.3rem;
 		}
 	}
-
-	.shows-list {
-		display: flex;
-		flex-direction: column;
-		gap: 1.5rem;
-	}
-
-	.show-item {
-		display: flex;
-		justify-content: space-between;
-		align-items: center;
-		padding: 1rem;
-		border: 1px solid #ddd;
-		border-radius: 4px;
-		background-color: #fff;
-		cursor: pointer;
-		transition: background-color 0.3s ease, border-color 0.3s ease;
-
-		&:hover {
-			background-color: #f9f9f9;
-			border-color: #bbb;
+	#shows {
+		.shows-list {
+			display: flex;
+			flex-direction: column;
+			gap: 1.5rem;
+			margin-bottom: 3rem;
+			margin-right: 5rem;
 		}
 
-		&.selected {
-			background-color: #333;
-			color: #fff;
-			border-color: #333;
-
-			.buy-tickets {
-				background-color: #ff5500;
-				color: #fff;
-			}
+		.show-header {
+			display: flex;
+			justify-content: space-evenly;
+			align-items: center;
 		}
 
-		p {
-			margin: 0;
-			flex: 1;
-			text-align: left;
-
-			&.show-date {
-				font-weight: bold;
-				flex: 2;
-			}
-
-			&.show-venue {
-				text-align: center;
-				flex: 2;
-			}
-
-			&.show-location {
-				text-align: right;
-				flex: 2;
-			}
-		}
-
-		.buy-tickets {
-			padding: 0.5rem 1rem;
-			border: none;
-			border-radius: 4px;
-			background-color: #333;
-			color: #fff;
+		.show-item {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			padding: 1rem;
 			cursor: pointer;
-			transition: background-color 0.3s ease;
+			transition: background-color 0.3s ease, border-color 0.3s ease;
 
 			&:hover {
-				background-color: #555;
+				background-color: $secondary-color-mercury;
+			}
+
+			&.selected {
+				background-color: $primary-color-black;
+				color: $primary-color-white;
+
+				.buy-tickets {
+					background-color: red;
+					color: $primary-color-white;
+				}
+			}
+
+			p {
+				margin: 0 4rem 0;
+				flex: 1;
+				text-align: left;
+				width: 10rem;
+
+				&.show-date {
+					font-weight: bold;
+					flex: 3;
+				}
+
+				&.show-venue {
+					text-align: center;
+					flex: 2;
+				}
+
+				&.show-location {
+					text-align: right;
+					flex: 3;
+				}
+			}
+
+			.buy-tickets {
+				padding: 0.5rem 1rem;
+				border: none;
+				border-radius: 0.3rem;
+				background-color: $primary-color-black;
+				color: $primary-color-white;
+				cursor: pointer;
+				transition: background-color 0.3s ease;
+
+				&:hover {
+					background-color: $primary-color-black;
+				}
 			}
 		}
 	}
