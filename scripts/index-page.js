@@ -17,7 +17,7 @@ const comments = [
 ];
 
 function renderComment(comment) {
-	const commentsList = document.getElementById("comments-list");
+	const commentsList = document.getElementById("comments-default-list");
 
 	const commentDiv = document.createElement("div");
 	commentDiv.classList.add("comment");
@@ -49,8 +49,8 @@ function renderComment(comment) {
 }
 
 function renderComments() {
-	const commentsList = document.getElementById("comments-list");
-	commentsList.innerHTML = ""; // Clear existing comments
+	const commentsList = document.getElementById("comments-default-list");
+	commentsList.innerHTML = "";
 	comments.forEach(renderComment);
 }
 
@@ -75,5 +75,4 @@ document
 		commentInput.value = "";
 	});
 
-// Initial render
 renderComments();
