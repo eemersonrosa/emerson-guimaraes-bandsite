@@ -409,6 +409,12 @@ main #shows .shows-list {
   margin-bottom: 3rem;
   margin-right: 5rem;
 }
+main #shows h2 {
+  margin-bottom: -2rem;
+  margin-top: 5rem;
+  margin-left: -10rem;
+  font-size: 2.5rem;
+}
 main #shows .show-header {
   display: flex;
   justify-content: space-evenly;
