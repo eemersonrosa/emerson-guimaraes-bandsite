@@ -392,7 +392,7 @@ footer .footer-brand-container .footer-logo .footer-logo-image {
     transform: none;
   }
   .header-container-background .header-container-image-container #soundcloud-section iframe {
-    height: 166px;
+    height: 10.375rem;
     border-radius: 0.5rem;
   }
   .header-container-background .header-container-text {
@@ -409,24 +409,29 @@ footer .footer-brand-container .footer-logo .footer-logo-image {
 }
 @media screen and (max-width: 768px) {
   .header-container-background {
-    height: 30vh;
+    height: 48vh;
   }
   .header-container-background .header-container-text {
     left: 50%;
     transform: translate(-50%, -50%);
-    text-align: center;
+    text-align: left;
+    top: 6rem;
+    width: 95%;
   }
   .header-container-background .header-container-text h1 {
     font-size: 1.9rem;
   }
-  .header-container-background #soundcloud-section {
-    position: static;
-    transform: none;
-    width: 100%;
-    margin: 1rem 0;
+  .header-container-background .header-container-text h3 {
+    font-size: 1rem;
   }
-  .header-container-background #soundcloud-section iframe {
-    height: 200px;
+  .header-container-background .header-container-image-container #soundcloud-section {
+    left: 1rem;
+    transform: none;
+  }
+  .header-container-background .header-container-image-container #soundcloud-section iframe {
+    height: 8rem;
+    border-radius: 0.5rem;
+    width: 87%;
   }
 }
 
@@ -550,5 +555,52 @@ main #shows .show-item .buy-tickets:hover {
   main #shows .show-item p.show-venue, main #shows .show-item p.show-location {
     font-size: 1rem;
     text-align: left;
+  }
+}
+@media screen and (max-width: 768px) {
+  main {
+    height: auto;
+  }
+  main #shows {
+    max-width: 100%;
+    margin: 0 auto;
+  }
+  main #shows h2 {
+    font-size: 1.75rem;
+    text-align: left;
+    margin-top: 2rem;
+  }
+  main #shows .shows-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+  main #shows .show-item {
+    display: flex;
+    flex-direction: column;
+  }
+  main #shows .show-item p {
+    margin: 0.5rem 0;
+    font-size: 1rem;
+    padding: 0.5rem;
+    margin-left: -10rem;
+  }
+  main #shows .show-item p.show-date {
+    font-weight: bold;
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+    margin-left: -10rem;
+  }
+  main #shows .show-item p.show-venue, main #shows .show-item p.show-location {
+    font-size: 1rem;
+    margin: 0.25rem 0;
+    margin-left: -10rem;
+  }
+  main #shows .show-item .buy-tickets {
+    display: block;
+    width: 100%;
+    padding: 0.75rem 0;
+    text-align: center;
+    font-weight: bold;
   }
 }/*# sourceMappingURL=shows.css.map */

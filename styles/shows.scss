@@ -80,7 +80,7 @@
 				transform: none;
 
 				iframe {
-					height: 166px;
+					height: 10.375rem;
 					border-radius: 0.5rem;
 				}
 			}
@@ -100,26 +100,33 @@
 	}
 
 	@media screen and (max-width: 768px) {
-		height: 30vh;
+		height: 48vh;
 
 		.header-container-text {
 			left: 50%;
 			transform: translate(-50%, -50%);
-			text-align: center;
+			text-align: left;
+			top: 6rem;
+			width: 95%;
 
 			h1 {
 				font-size: 1.9rem;
 			}
+			h3 {
+				font-size: 1rem;
+			}
 		}
 
-		#soundcloud-section {
-			position: static;
-			transform: none;
-			width: 100%;
-			margin: 1rem 0;
+		.header-container-image-container {
+			#soundcloud-section {
+				left: 1rem;
+				transform: none;
 
-			iframe {
-				height: 200px;
+				iframe {
+					height: 8rem;
+					border-radius: 0.5rem;
+					width: 87%;
+				}
 			}
 		}
 	}
@@ -269,6 +276,61 @@ main {
 						font-size: 1rem;
 						text-align: left;
 					}
+				}
+			}
+		}
+	}
+
+	@media screen and (max-width: 768px) {
+		height: auto;
+
+		#shows {
+			max-width: 100%;
+			margin: 0 auto;
+
+			h2 {
+				font-size: 1.75rem;
+				text-align: left;
+				margin-top: 2rem;
+			}
+
+			.shows-list {
+				display: flex;
+				flex-direction: column;
+				gap: 0;
+			}
+
+			.show-item {
+				display: flex;
+				flex-direction: column;
+
+				p {
+					margin: 0.5rem 0;
+					font-size: 1rem;
+					padding: 0.5rem;
+					margin-left: -10rem;
+
+					&.show-date {
+						font-weight: bold;
+						font-size: 1rem;
+						margin-bottom: 0.5rem;
+						margin-left: -10rem;
+					}
+
+					&.show-venue,
+					&.show-location {
+						font-size: 1rem;
+						margin: 0.25rem 0;
+						margin-left: -10rem;
+					}
+				}
+
+				.buy-tickets {
+					display: block;
+					width: 100%;
+					padding: 0.75rem 0;
+					text-align: center;
+					font-weight: bold;
 				}
 			}
 		}

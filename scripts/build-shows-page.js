@@ -33,7 +33,23 @@ const showsData = [
 ];
 
 /**
- * Function to create a header row for the shows list.
+ * Function to check if screen width matches phone size
+ * @returns {boolean} True if screen width is <= 768px, otherwise false.
+ */
+function isPhoneSize() {
+	return window.innerWidth <= 768;
+}
+
+/**
+ * Function to check if the screen width matches desktop/tablet sizes
+ * @returns {boolean} True if screen width > 768px, otherwise false.
+ */
+function isTabletOrDesktop() {
+	return window.innerWidth > 768;
+}
+
+/**
+ * Function to create a header row for the shows list (desktop and tablet only).
  * @returns {HTMLElement} The header row element.
  */
 function createHeaderRow() {
@@ -63,27 +79,28 @@ function createHeaderRow() {
 /**
  * Function to create a show item element.
  * @param {Object} show - The show data object.
- * @param {string} show.date - The date of the show.
- * @param {string} show.venue - The venue of the show.
- * @param {string} show.location - The location of the show.
  * @returns {HTMLElement} The show item element.
  */
 function createShowItem(show) {
 	const showItem = document.createElement("div");
 	showItem.classList.add("show-item");
 
+	// Date
 	const date = document.createElement("p");
 	date.classList.add("show-date");
 	date.textContent = show.date;
 
+	// Venue
 	const venue = document.createElement("p");
 	venue.classList.add("show-venue");
 	venue.textContent = show.venue;
 
+	// Location
 	const location = document.createElement("p");
 	location.classList.add("show-location");
 	location.textContent = show.location;
 
+	// Buy Tickets Button
 	const button = document.createElement("button");
 	button.classList.add("buy-tickets");
 	button.textContent = "BUY TICKETS";
@@ -94,7 +111,7 @@ function createShowItem(show) {
 	showItem.appendChild(location);
 	showItem.appendChild(button);
 
-	// Add hover and click styles
+	// Click event for "selected" styling
 	showItem.addEventListener("click", () => {
 		document.querySelectorAll(".show-item").forEach((item) => {
 			item.classList.remove("selected");
@@ -106,21 +123,25 @@ function createShowItem(show) {
 }
 
 /**
- * Function to render all shows on the page.
+ * Function to render all shows dynamically.
  */
 function renderShows() {
 	const showsList = document.getElementById("shows-list");
+	showsList.innerHTML = ""; // Clear the container
 
-	// Create and append the header row
-	const headerRow = createHeaderRow();
-	showsList.appendChild(headerRow);
+	// Create and append the header row for tablet/desktop only
+	if (isTabletOrDesktop()) {
+		const headerRow = createHeaderRow();
+		showsList.appendChild(headerRow);
+	}
 
-	// Create and append each show item
+	// Render each show item
 	showsData.forEach((show) => {
 		const showItem = createShowItem(show);
 		showsList.appendChild(showItem);
 	});
 }
 
-// Render shows on page load
+// Render shows on page load and on window resize
 renderShows();
+window.addEventListener("resize", renderShows);
