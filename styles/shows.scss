@@ -72,24 +72,29 @@
 	}
 
 	@media screen and (max-width: 1024px) {
-		height: 40vh;
+		height: 50vh;
 
-		.header-container-text {
-			left: 35%;
-			transform: translate(-50%, -50%);
-			text-align: left;
+		.header-container-image-container {
+			#soundcloud-section {
+				left: 3rem;
+				transform: none;
 
-			h1 {
-				font-size: 4rem;
+				iframe {
+					height: 166px;
+					border-radius: 0.5rem;
+				}
 			}
 		}
 
-		#soundcloud-section {
-			width: 20rem;
-			right: 1rem;
-
-			iframe {
-				height: 250px;
+		.header-container-text {
+			left: 3rem;
+			max-width: 85%;
+			top: 10rem;
+			h3 {
+				font-size: 2rem;
+			}
+			h1 {
+				font-size: 3.5rem;
 			}
 		}
 	}

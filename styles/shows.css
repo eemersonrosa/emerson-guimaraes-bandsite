@@ -385,22 +385,26 @@ footer .footer-brand-container .footer-logo .footer-logo-image {
 }
 @media screen and (max-width: 1024px) {
   .header-container-background {
-    height: 40vh;
+    height: 50vh;
+  }
+  .header-container-background .header-container-image-container #soundcloud-section {
+    left: 3rem;
+    transform: none;
+  }
+  .header-container-background .header-container-image-container #soundcloud-section iframe {
+    height: 166px;
+    border-radius: 0.5rem;
   }
   .header-container-background .header-container-text {
-    left: 35%;
-    transform: translate(-50%, -50%);
-    text-align: left;
+    left: 3rem;
+    max-width: 85%;
+    top: 10rem;
+  }
+  .header-container-background .header-container-text h3 {
+    font-size: 2rem;
   }
   .header-container-background .header-container-text h1 {
-    font-size: 4rem;
-  }
-  .header-container-background #soundcloud-section {
-    width: 20rem;
-    right: 1rem;
-  }
-  .header-container-background #soundcloud-section iframe {
-    height: 250px;
+    font-size: 3.5rem;
   }
 }
 @media screen and (max-width: 768px) {
