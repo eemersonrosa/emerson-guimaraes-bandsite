@@ -220,4 +220,57 @@ main {
 			}
 		}
 	}
+	@media screen and (max-width: 1024px) {
+		height: 70vh;
+		#shows {
+			width: 100%;
+			margin: 0;
+
+			h2 {
+				font-size: 2rem;
+				text-align: left;
+				margin-bottom: 1rem;
+				margin-left: 2rem;
+				margin-top: 0;
+			}
+			.show-header {
+				p {
+					&.show-date,
+					&.show-venue,
+					&.show-location {
+						text-align: left;
+					}
+				}
+			}
+
+			.shows-list {
+				display: flex;
+				flex-direction: column;
+				gap: 1rem;
+				margin: 0;
+				width: 100%;
+			}
+
+			.show-item {
+				padding: 1rem;
+
+				p {
+					margin: 0.5rem 0;
+					font-size: 1rem;
+
+					&.show-date {
+						font-size: 1rem;
+						font-weight: normal;
+						text-align: left;
+					}
+
+					&.show-venue,
+					&.show-location {
+						font-size: 1rem;
+						text-align: left;
+					}
+				}
+			}
+		}
+	}
 }

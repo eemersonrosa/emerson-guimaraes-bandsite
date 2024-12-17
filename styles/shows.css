@@ -509,4 +509,46 @@ main #shows .show-item .buy-tickets {
 }
 main #shows .show-item .buy-tickets:hover {
   background-color: #323232;
+}
+@media screen and (max-width: 1024px) {
+  main {
+    height: 70vh;
+  }
+  main #shows {
+    width: 100%;
+    margin: 0;
+  }
+  main #shows h2 {
+    font-size: 2rem;
+    text-align: left;
+    margin-bottom: 1rem;
+    margin-left: 2rem;
+    margin-top: 0;
+  }
+  main #shows .show-header p.show-date, main #shows .show-header p.show-venue, main #shows .show-header p.show-location {
+    text-align: left;
+  }
+  main #shows .shows-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin: 0;
+    width: 100%;
+  }
+  main #shows .show-item {
+    padding: 1rem;
+  }
+  main #shows .show-item p {
+    margin: 0.5rem 0;
+    font-size: 1rem;
+  }
+  main #shows .show-item p.show-date {
+    font-size: 1rem;
+    font-weight: normal;
+    text-align: left;
+  }
+  main #shows .show-item p.show-venue, main #shows .show-item p.show-location {
+    font-size: 1rem;
+    text-align: left;
+  }
 }/*# sourceMappingURL=shows.css.map */
