@@ -111,10 +111,6 @@ body {
     font-size: 1.25rem;
   }
 }
-.header-nav-links a {
-  text-decoration: none;
-  color: #afafaf;
-}
 .header-nav-links li {
   display: inline-block;
   text-align: center;
@@ -157,8 +153,14 @@ body {
   }
 }
 .header-nav-links li:hover, .header-nav-links li.active {
-  color: #ffffff;
   font-family: "NunitoSans-Bold", sans-serif;
+}
+.header-nav-links li:not(.active) {
+  font-family: "NunitoSans-Regular", sans-serif;
+}
+.header-nav-links li a {
+  color: #ffffff;
+  text-decoration: none;
 }
 
 footer {
@@ -235,7 +237,7 @@ footer .footer-brand-container .footer-logo .footer-logo-image {
   width: 16vh;
   height: auto;
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1279px) {
   footer .footer-container .footer-get-in-touch {
     width: 65%;
   }
@@ -383,7 +385,7 @@ footer .footer-brand-container .footer-logo .footer-logo-image {
   font-family: "NunitoSans-Medium", sans-serif;
   margin-top: 0.5rem;
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1279px) {
   .header-container-background {
     height: 50vh;
   }
@@ -409,7 +411,7 @@ footer .footer-brand-container .footer-logo .footer-logo-image {
 }
 @media screen and (max-width: 768px) {
   .header-container-background {
-    height: 48vh;
+    height: 40vh;
   }
   .header-container-background .header-container-text {
     left: 50%;
@@ -453,7 +455,7 @@ main #shows .shows-list {
   flex-direction: column;
   gap: 1.5rem;
   margin-bottom: 3rem;
-  margin-right: 5rem;
+  margin-right: 8rem;
 }
 main #shows h2 {
   margin-bottom: -2rem;
@@ -515,7 +517,7 @@ main #shows .show-item .buy-tickets {
 main #shows .show-item .buy-tickets:hover {
   background-color: #323232;
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1279px) {
   main {
     height: 70vh;
   }

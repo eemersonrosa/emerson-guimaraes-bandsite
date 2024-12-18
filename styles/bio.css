@@ -111,10 +111,6 @@ body {
     font-size: 1.25rem;
   }
 }
-.header-nav-links a {
-  text-decoration: none;
-  color: #afafaf;
-}
 .header-nav-links li {
   display: inline-block;
   text-align: center;
@@ -157,8 +153,14 @@ body {
   }
 }
 .header-nav-links li:hover, .header-nav-links li.active {
-  color: #ffffff;
   font-family: "NunitoSans-Bold", sans-serif;
+}
+.header-nav-links li:not(.active) {
+  font-family: "NunitoSans-Regular", sans-serif;
+}
+.header-nav-links li a {
+  color: #ffffff;
+  text-decoration: none;
 }
 
 footer {
@@ -235,7 +237,7 @@ footer .footer-brand-container .footer-logo .footer-logo-image {
   width: 16vh;
   height: auto;
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1279px) {
   footer .footer-container .footer-get-in-touch {
     width: 65%;
   }
