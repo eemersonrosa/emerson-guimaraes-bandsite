@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 800" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#141428"/>
+      <stop offset="1" stop-color="#2c1a4d"/>
+    </linearGradient>
+    <radialGradient id="spot" cx="0.5" cy="0" r="1">
+      <stop offset="0" stop-color="#8f7bff" stop-opacity="0.55"/>
+      <stop offset="1" stop-color="#8f7bff" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="1920" height="800" fill="url(#g)"/>
+  <polygon points="400,0 200,800 700,800" fill="url(#spot)"/>
+  <polygon points="1500,0 1250,800 1750,800" fill="url(#spot)"/>
+  <g fill="#ffffff">
+    <circle cx="240" cy="640" r="5" opacity="0.35"/><circle cx="420" cy="700" r="4" opacity="0.25"/>
+    <circle cx="640" cy="660" r="6" opacity="0.3"/><circle cx="880" cy="710" r="4" opacity="0.2"/>
+    <circle cx="1090" cy="650" r="5" opacity="0.3"/><circle cx="1320" cy="700" r="6" opacity="0.25"/>
+    <circle cx="1560" cy="660" r="4" opacity="0.35"/><circle cx="1760" cy="710" r="5" opacity="0.2"/>
+  </g>
+</svg>

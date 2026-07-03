@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Emerson Guimaraes">
+    <meta name="description" content="Upcoming shows and tickets for The Neon Larks — a fictional demo band site.">
+    <title>The Neon Larks | Shows</title>
+    <link rel="icon" href="../assets/logos/logo-neonlarks.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="../styles/global.css">
+    <link rel="stylesheet" href="../styles/shows.css">
+</head>
+
+<body>
+    <header>
+        <nav class="header-nav">
+            <a href="../index.html" class="header-logo">
+                <img src="../assets/logos/logo-neonlarks.svg" alt="Neon Larks logo" class="header-logo-image">
+            </a>
+            <ul class="header-nav-links">
+                <li><a href="../index.html">Biography</a></li>
+                <li class="active"><a href="./shows.html">Shows</a></li>
+            </ul>
+        </nav>
+
+        <section class="hero hero--shows">
+            <img src="../assets/images/hero-shows.svg" alt="Abstract stage-lights artwork" class="hero-bg">
+            <div class="hero-content">
+                <p class="hero-eyebrow">Glass Horizon Album</p>
+                <h1 class="hero-title">The Glass Horizon Tour</h1>
+            </div>
+            <div class="hero-player">
+                <p class="player-label">Latest Single</p>
+                <p class="player-track">City of Echoes</p>
+                <div class="player-bar"><span></span></div>
+                <p class="player-note">Streaming everywhere Friday</p>
+            </div>
+        </section>
+    </header>
+
+    <main>
+        <section id="shows" class="shows-section container">
+            <h2>Shows</h2>
+            <div class="show-header" aria-hidden="true">
+                <p class="show-cell">Date</p>
+                <p class="show-cell">Venue</p>
+                <p class="show-cell">Location</p>
+                <p class="show-cell"></p>
+            </div>
+            <div id="shows-list" class="shows-list"></div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-top">
+                <h2>Get in Touch</h2>
+                <div class="footer-social-icons">
+                    <a href="https://www.instagram.com/" class="footer-icon" aria-label="Instagram">
+                        <img src="../assets/icons/icon-camera.svg" alt="Instagram">
+                    </a>
+                    <a href="https://www.facebook.com/" class="footer-icon" aria-label="Facebook">
+                        <img src="../assets/icons/icon-people.svg" alt="Facebook">
+                    </a>
+                    <a href="https://www.x.com/" class="footer-icon" aria-label="X">
+                        <img src="../assets/icons/icon-x.svg" alt="X">
+                    </a>
+                </div>
+                <a href="../index.html" class="footer-logo">
+                    <img src="../assets/logos/logo-neonlarks.svg" alt="Neon Larks logo" class="footer-logo-image">
+                </a>
+            </div>
+
+            <div class="footer-contact-info">
+                <div class="footer-column">
+                    <h3>Neon Larks Management</h3>
+                    <p>2140 Alder Court,<br>Portland, OR 97205, USA</p>
+                    <p><a href="mailto:hello@theneonlarks.example">hello@theneonlarks.example</a></p>
+                </div>
+
+                <div class="footer-column">
+                    <h3>Northbound Artist Group</h3>
+                    <p>Booking Agent for<br>USA / Canada / Mexico</p>
+                    <p><a href="mailto:bookings@northboundag.example">bookings@northboundag.example</a></p>
+                </div>
+
+                <div class="footer-column">
+                    <h3>Aurora Entertainment</h3>
+                    <p>Booking Agent for<br>UK / EU / AU</p>
+                    <p><a href="mailto:bookings@auroraent.example">bookings@auroraent.example</a></p>
+                </div>
+            </div>
+
+            <p class="footer-copyright">© 2026 The Neon Larks — a fictional band. All site content is original demo material.</p>
+        </div>
+    </footer>
+
+    <script src="../scripts/build-shows-page.js"></script>
+</body>
+
+</html>

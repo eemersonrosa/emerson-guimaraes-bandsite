@@ -1,0 +1,223 @@
+/* ==========================================================================
+   Shows page
+   ========================================================================== */
+
+/* --- Hero: title + latest-single card --- */
+.hero--shows {
+  gap: 2rem;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+.hero-eyebrow {
+  margin: 0 0 0.5rem;
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+.hero--shows .hero-title {
+  font-size: 1.6rem;
+}
+
+/* "Latest single" card (self-contained, no third-party embed) */
+.hero-player {
+  width: 100%;
+  max-width: 26rem;
+  padding: 1.25rem 1.5rem;
+  background-color: rgba(20, 20, 40, 0.75);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 0.5rem;
+}
+
+.player-label {
+  margin: 0 0 0.25rem;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--color-silver);
+}
+
+.player-track {
+  margin: 0 0 1rem;
+  font-size: 1.4rem;
+  font-weight: 700;
+}
+
+.player-bar {
+  height: 0.375rem;
+  border-radius: 0.25rem;
+  background-color: rgba(255, 255, 255, 0.2);
+  overflow: hidden;
+  margin-bottom: 0.75rem;
+}
+
+.player-bar span {
+  display: block;
+  width: 35%;
+  height: 100%;
+  border-radius: 0.25rem;
+  background-color: #5ee0c0;
+}
+
+.player-note {
+  margin: 0;
+  font-size: 0.85rem;
+  color: var(--color-mercury);
+}
+
+@media (min-width: 768px) {
+  .hero--shows {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 3rem;
+  }
+
+  .hero--shows .hero-title {
+    font-size: 2.5rem;
+  }
+
+  .hero-eyebrow {
+    font-size: 1.25rem;
+  }
+
+  .hero-content {
+    max-width: 32rem;
+  }
+
+  .hero-player {
+    flex-shrink: 0;
+  }
+}
+
+@media (min-width: 1280px) {
+  .hero--shows .hero-title {
+    font-size: 3.25rem;
+  }
+}
+
+/* --- Shows list --- */
+.shows-section {
+  padding-top: 1rem;
+  padding-bottom: 3rem;
+}
+
+.shows-section h2 {
+  font-size: 1.5rem;
+  margin: 1rem 0 1.5rem;
+}
+
+/* Shared grid template keeps the header and every row perfectly aligned */
+.show-header,
+.show-item {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.5rem;
+  padding: 1rem 0.5rem;
+}
+
+/* Column headers: hidden on mobile (each cell carries its own label) */
+.show-header {
+  display: none;
+  color: var(--color-silver);
+}
+
+.show-header p {
+  margin: 0;
+}
+
+.show-header {
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding-bottom: 0.5rem;
+}
+
+.show-item {
+  border-bottom: 1px solid var(--color-mercury);
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.show-item:first-of-type {
+  border-top: 1px solid var(--color-mercury);
+}
+
+.show-item:hover {
+  background-color: var(--color-alabaster);
+}
+
+.show-item.selected {
+  background-color: var(--color-mercury);
+}
+
+/* Per-cell label, mobile only */
+.show-cell-label {
+  display: block;
+  color: var(--color-silver);
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 0.25rem;
+}
+
+.show-cell p {
+  margin: 0;
+  font-size: 1rem;
+}
+
+.show-cell--date p {
+  font-weight: 700;
+}
+
+.buy-tickets {
+  width: 100%;
+  margin-top: 0.75rem;
+  padding: 0.75rem 1rem;
+  white-space: nowrap;
+  border: none;
+  border-radius: 0.25rem;
+  background-color: var(--color-black);
+  color: var(--color-white);
+  font-size: 0.9rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.buy-tickets:hover {
+  background-color: var(--color-dark-black);
+}
+
+@media (min-width: 768px) {
+  .shows-section h2 {
+    font-size: 2.25rem;
+    margin: 2rem 0;
+  }
+
+  .show-header,
+  .show-item {
+    grid-template-columns: 1.2fr 1.2fr 1.2fr 9rem;
+    gap: 1.5rem;
+    align-items: center;
+    padding: 1.25rem 1rem;
+  }
+
+  .show-header {
+    display: grid;
+  }
+
+  /* Desktop/tablet get column headers instead of per-cell labels */
+  .show-cell-label {
+    display: none;
+  }
+
+  .buy-tickets {
+    width: auto;
+    margin-top: 0;
+  }
+}

@@ -1,0 +1,317 @@
+/* ==========================================================================
+   Global styles — fonts, variables, header, hero, footer
+   Mobile-first: base styles target phones, min-width queries scale up.
+   Breakpoints: 768px (tablet), 1280px (desktop)
+   ========================================================================== */
+
+/* Fonts */
+@font-face {
+  font-family: "NunitoSans";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../assets/fonts/NunitoSans-Regular.woff2") format("woff2"),
+    url("../assets/fonts/NunitoSans-Regular.woff") format("woff");
+}
+
+@font-face {
+  font-family: "NunitoSans";
+  font-style: normal;
+  font-weight: 500;
+  src: url("../assets/fonts/NunitoSans-Medium.woff2") format("woff2"),
+    url("../assets/fonts/NunitoSans-Medium.woff") format("woff");
+}
+
+@font-face {
+  font-family: "NunitoSans";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../assets/fonts/NunitoSans-Bold.woff2") format("woff2"),
+    url("../assets/fonts/NunitoSans-Bold.woff") format("woff");
+}
+
+/* Variables */
+:root {
+  --color-black: #323232;
+  --color-silver: #afafaf;
+  --color-white: #ffffff;
+  --color-dark-black: #000000;
+  --color-mercury: #e1e1e1;
+  --color-alabaster: #fafafa;
+
+  --container-max: 64rem;
+  --page-padding: 1rem;
+}
+
+@media (min-width: 768px) {
+  :root {
+    --page-padding: 2.25rem;
+  }
+}
+
+@media (min-width: 1280px) {
+  :root {
+    --page-padding: 4rem;
+  }
+}
+
+/* Reset */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "NunitoSans", sans-serif;
+  color: var(--color-black);
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Container: centers page sections */
+.container {
+  max-width: var(--container-max);
+  margin: 0 auto;
+  padding-left: var(--page-padding);
+  padding-right: var(--page-padding);
+}
+
+/* ==========================================================================
+   Header / nav
+   ========================================================================== */
+.header-nav {
+  background-color: var(--color-black);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.header-logo {
+  display: flex;
+  padding-top: 1rem;
+}
+
+.header-logo-image {
+  width: 7.5rem;
+}
+
+.header-nav-links {
+  list-style: none;
+  display: flex;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.header-nav-links li {
+  flex: 1;
+  text-align: center;
+  position: relative;
+}
+
+.header-nav-links a {
+  display: block;
+  padding: 1rem 0 0.75rem;
+  color: var(--color-silver);
+  text-decoration: none;
+  border-bottom: 0.25rem solid transparent;
+}
+
+.header-nav-links li:hover a,
+.header-nav-links li.active a {
+  color: var(--color-white);
+  font-weight: 700;
+  border-bottom-color: var(--color-white);
+}
+
+@media (min-width: 768px) {
+  .header-nav {
+    flex-direction: row;
+    padding: 0 var(--page-padding);
+    gap: 2.5rem;
+  }
+
+  .header-logo {
+    padding: 0;
+  }
+
+  .header-logo-image {
+    width: 8.5rem;
+  }
+
+  .header-nav-links {
+    width: auto;
+    gap: 2rem;
+  }
+
+  .header-nav-links li {
+    flex: none;
+  }
+
+  .header-nav-links a {
+    padding: 1.5rem 0.25rem calc(1.5rem - 0.25rem);
+  }
+}
+
+/* ==========================================================================
+   Hero
+   ========================================================================== */
+.hero {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 40vh;
+  padding: 2rem var(--page-padding);
+  color: var(--color-white);
+  overflow: hidden;
+}
+
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+
+/* Dark overlay so text stays readable on any image */
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(50, 50, 50, 0.5);
+  z-index: 1;
+}
+
+.hero > :not(.hero-bg) {
+  position: relative;
+  z-index: 2;
+}
+
+.hero-title {
+  margin: 0;
+  font-size: 1.9rem;
+  font-weight: 700;
+}
+
+@media (min-width: 768px) {
+  .hero {
+    min-height: 50vh;
+  }
+
+  .hero-title {
+    font-size: 3.75rem;
+  }
+}
+
+@media (min-width: 1280px) {
+  .hero {
+    min-height: 60vh;
+  }
+}
+
+/* ==========================================================================
+   Footer
+   ========================================================================== */
+.footer {
+  background-color: var(--color-black);
+  color: var(--color-white);
+  padding: 2rem 0 1rem;
+  font-size: 0.9rem;
+}
+
+.footer-top {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.footer-top h2 {
+  margin: 0;
+  font-size: 1.75rem;
+}
+
+.footer-social-icons {
+  display: flex;
+  gap: 2.5rem;
+  align-items: center;
+}
+
+.footer-social-icons img {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.footer-logo-image {
+  width: 8rem;
+}
+
+.footer-contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin: 1.5rem 0;
+}
+
+.footer-column h3 {
+  margin: 0 0 1rem;
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+.footer-column p {
+  margin: 0 0 0.75rem;
+  line-height: 1.4;
+}
+
+.footer-column a {
+  color: var(--color-white);
+  text-decoration: none;
+}
+
+.footer-column a:hover {
+  text-decoration: underline;
+}
+
+.footer-copyright {
+  margin: 1.5rem 0 0;
+  font-size: 0.8rem;
+}
+
+@media (min-width: 768px) {
+  .footer {
+    padding: 3rem 0 2rem;
+  }
+
+  .footer-top {
+    flex-direction: row;
+    align-items: center;
+    gap: 2.5rem;
+  }
+
+  .footer-top h2 {
+    font-size: 2.25rem;
+  }
+
+  /* Push the brand logo to the far right of the top row */
+  .footer-logo {
+    margin-left: auto;
+  }
+
+  .footer-contact-info {
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 2rem;
+    margin: 2.5rem 0;
+  }
+
+  .footer-column {
+    max-width: 15rem;
+  }
+}
