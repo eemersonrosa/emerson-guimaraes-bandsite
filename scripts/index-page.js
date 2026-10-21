@@ -104,7 +104,12 @@ document
 		// Newest comments appear at the top of the list
 		comments.unshift({
 			name: name,
-			timestamp: new Date().toLocaleDateString(),
+			// Same MM/DD/YYYY format as the seeded comments, whatever the visitor's locale.
+			timestamp: new Date().toLocaleDateString("en-US", {
+				month: "2-digit",
+				day: "2-digit",
+				year: "numeric",
+			}),
 			text: text,
 		});
 		renderComments();
