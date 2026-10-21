@@ -1,32 +1,33 @@
 // Shows data array
+// shortcut: fixed demo dates; move them forward once they are in the past.
 const showsData = [
 	{
-		date: "Sat Jul 18 2026",
+		date: "Sat Jul 17 2027",
 		venue: "The Lantern Room",
 		location: "Portland, OR",
 	},
 	{
-		date: "Fri Aug 07 2026",
+		date: "Fri Aug 06 2027",
 		venue: "Harbor & Vine",
 		location: "Seattle, WA",
 	},
 	{
-		date: "Sat Aug 22 2026",
+		date: "Sat Aug 21 2027",
 		venue: "The Gilded Owl",
 		location: "San Francisco, CA",
 	},
 	{
-		date: "Fri Sep 11 2026",
+		date: "Fri Sep 10 2027",
 		venue: "Echo Parlor",
 		location: "Los Angeles, CA",
 	},
 	{
-		date: "Sat Oct 03 2026",
+		date: "Sat Oct 02 2027",
 		venue: "The Brass Note",
 		location: "Austin, TX",
 	},
 	{
-		date: "Fri Oct 23 2026",
+		date: "Fri Oct 22 2027",
 		venue: "Northlight Hall",
 		location: "Denver, CO",
 	},
